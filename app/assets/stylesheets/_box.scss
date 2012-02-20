@@ -1,0 +1,43 @@
+@import "compass";
+@include global-reset;
+
+.box {
+	
+    margin: 5px 0 5px 0;
+	padding: 10px;
+	background: white;
+	@include box-shadow(0 2px 5px rgba(#000,.3));
+	@include clearfix;
+	@include border-radius(5px);
+	.thumbnail-image{
+		width: 30%;
+		float: left;
+	}
+	.topic{
+		width: 69%;
+		float: right;
+	}
+	.single-comment{
+		border-bottom: 2px solid #ccc;
+		font-size: 12px;
+		padding: 10px 15px 15px 10px;
+		margin: 0 -10px -10px;
+		.date{
+			float:right;
+			color: #ccc;
+			font-size: 12px;
+		}
+		.username{
+			float: left;
+			line-height: 1.2;
+			font-size: 14px;
+		}
+		.message{
+			line-height: 1.2;
+		}
+		&:last-child{
+			@include border-radius(0 0 5px 5px);
+		}
+	
+	}
+}

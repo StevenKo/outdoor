@@ -1,0 +1,29 @@
+.span10
+  %ul.breadcrumb
+    %li
+      %a{:href => "#"} OutdoorGear
+      %span.divider /
+    %li.active You are here
+  %ul.page-tool
+    %li.btn
+      %a{:href => "#"} 回覆文章
+    %li.btn 
+      %a{:href => "#"} 發表新主題
+  .box
+    %a{:href => "#"}= lorem.name
+    .thumbnail-image= image_tag( lorem.image("100X120px"), :alt => "",:height=> "120px")
+    .topic
+      %header
+        %a{:href => "#"} This is the topic
+      註冊日期:
+      %span= lorem.date
+      %br
+      收藏
+      -3.times do
+        .thumbnail-image= image_tag( lorem.image("50X50px"), :alt => "",:height=> "50px")
+      
+      %article Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      .topic-link
+        %a{:href => "#"} 回覆
+        %span |
+        %a{:href => "#"} 收藏

@@ -1,0 +1,28 @@
+.logo
+  %a.brand{:href => "#"} 戶外裝備網
+  .sign_in
+    %form.pull-right{:action => ""}
+      %input.input-small{:placeholder => "Username", :type => "text"}
+      %input.input-small{:placeholder => "Password", :type => "password"}
+      %button.btn{:type => "submit"} Sign in
+      %button.btn{:type => "submit"} Facebook
+
+.navbar.navbar-fixed-top.mytop
+  .navbar-inner
+    .container-fluid
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .nav-collapse
+        %ul.nav
+          %li.active
+            %a{:href => "#"} Home
+          %li
+            %a{:href => "#about"} About
+          %li
+            %a{:href => "#contact"} Contact
+        %p.navbar-text.pull-right
+          Logged in as
+          %a{:href => "#"} username
+      / /.nav-collapse

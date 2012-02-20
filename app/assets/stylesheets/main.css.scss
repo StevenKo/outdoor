@@ -1,0 +1,52 @@
+@import "compass";
+@include global-reset;
+@import "box";
+@import "topbar";
+
+
+#container{
+	margin-top: 130px;
+	padding-bottom: 60px;
+}
+
+footer {
+            position:absolute;
+			   bottom:0;
+			   width:100%;
+			   height:60px;   /* Height of the footer */
+            background: #f3f0f0;
+            padding-left: 20px;
+}
+
+.group:before, .group:after {
+   content: "";
+   display: table;
+}
+.group:after {
+   clear: both;
+}
+.group {
+   zoom: 1; /* IE6&7 */
+}
+
+.page-tool.pagination{
+	float: right;
+}
+
+//.breadcrumb .btn{
+//	float: right;
+//	display: inline;
+//	
+//}
+
+.posts{
+	background: #f0f0f0;
+	margin-left: 3px;
+	
+}
+
+.post-box{
+	background: #f0f0ff;
+	margin-left: 3px;
+	padding-bottom: 5px;
+}
