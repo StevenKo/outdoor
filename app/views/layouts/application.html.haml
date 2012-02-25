@@ -11,7 +11,9 @@
       =render :partial => "_partials/topbar"
     #container.container-fluid
       .row-fluid
-        =yield
-        =render :partial => "_partials/sidebar"
+        .span10
+          =yield
+        .span2
+          =render :partial => "_partials/sidebar"
     #footer
       =render :partial => "_partials/footer"

@@ -1,11 +1,8 @@
 .logo
   %a.brand{:href => "#"} 戶外裝備網
-  .sign_in
-    %form.pull-right{:action => ""}
-      %input.input-small{:placeholder => "Username", :type => "text"}
-      %input.input-small{:placeholder => "Password", :type => "password"}
-      %button.btn{:type => "submit"} Sign in
-      %button.btn{:type => "submit"} Facebook
+  .sign_in.pull-right
+    =sign_in_div
+
 
 .navbar.navbar-fixed-top.mytop
   .navbar-inner

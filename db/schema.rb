@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120216152659) do
+ActiveRecord::Schema.define(:version => 20120222124708) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -30,6 +30,23 @@ ActiveRecord::Schema.define(:version => 20120216152659) do
     t.datetime "updated_at"
   end
 
+  create_table "collect_user_post_ships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "collect_user_post_ships", ["post_id"], :name => "index_collect_user_post_ships_on_post_id"
+  add_index "collect_user_post_ships", ["user_id"], :name => "index_collect_user_post_ships_on_user_id"
+
+  create_table "collect_user_topic_ships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", :force => true do |t|
     t.integer  "topic_id"
     t.integer  "user_id"
@@ -40,6 +57,23 @@ ActiveRecord::Schema.define(:version => 20120216152659) do
 
   add_index "posts", ["topic_id"], :name => "index_posts_on_topic_id"
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       :limit => 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
+  end
 
   create_table "topics", :force => true do |t|
     t.integer  "board_id"
@@ -52,6 +86,13 @@ ActiveRecord::Schema.define(:version => 20120216152659) do
 
   add_index "topics", ["board_id"], :name => "index_topics_on_board_id"
   add_index "topics", ["user_id"], :name => "index_topics_on_user_id"
+
+  create_table "user_references", :force => true do |t|
+    t.integer  "target_user_id"
+    t.integer  "follower_user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

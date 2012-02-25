@@ -58,7 +58,18 @@ gem 'omniauth-facebook'
 group :test, :development do
   gem "rspec"
   gem "rspec-rails"
+  gem "shoulda-matchers"
+  gem 'mocha'
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
+
+#mail
+gem 'madmimi'
+
+gem 'tinymce-rails', :git => "git://github.com/pshoukry/tinymce-rails"
+
+gem 'acts-as-taggable-on', '~> 2.2.2'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',:git => 'git://github.com/anjlab/bootstrap-rails.git'
 

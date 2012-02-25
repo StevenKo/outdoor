@@ -1,16 +1,16 @@
-.span10
-  .hero-unit
-    %h1 Hello, world!
-    %p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-    %p
-      %a.btn.btn-primary.btn-large Learn more »
-  - @boards_array.each_with_index do |board, index|
-    .row-fluid 
-      -board.each do |b|
-        .span4
-          %h2= b.title
-          %p= b.description
-          %p
-            =link_to "進入... »",board_path(b), :class => :btn
-    %hr
+.hero-unit
+  %h1 Hello, world!
+  %p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+  %p
+    %a.btn.btn-primary.btn-large Learn more »
+- @boards_array.each_with_index do |board, index|
+  .row-fluid 
+    -board.each do |b|
+      .span4
+        %h2= b.title
+        %p= b.description
+        %p
+          =link_to "進入... »",board_path(b), :class => :btn
+  %hr
 
+  
