@@ -14,7 +14,9 @@ NewOutdoor::Application.routes.draw do
   
   resources :posts
   
-  resources :users 
+  resources :users
+  
+  post "pictures/upload" 
    
   # The priority is based upon order of creation:
   # first created -> highest priority.

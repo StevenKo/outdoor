@@ -12,3 +12,11 @@
 
 //= require tinymce-jquery
 //= require_tree .
+
+
+//= require plupload
+//= require plupload.settings     
+//= require jquery.plupload.queue 
+//= require plupload.flash        
+//= require plupload.silverlight    
+//= require plupload.html5
