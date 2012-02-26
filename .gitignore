@@ -19,3 +19,6 @@
 /config/facebook.yml
 /public/uploads
 /dump.rdb
+
+/app/assets/javascripts/.DS_Store
+/app/assets/.DS_Store
