@@ -5,7 +5,7 @@ class CreateTopics < ActiveRecord::Migration
       t.integer :board_id
       t.integer :user_id
       t.string  :title
-      t.string  :description
+      t.text  :content
       
       t.timestamps
     end

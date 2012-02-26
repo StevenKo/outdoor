@@ -5,7 +5,7 @@
   %li.active You are here
 .page-tool
   %li.btn 
-    %a{:href => "#"} 發表新主題
+    = link_to "發表新主題", new_board_topic_path(@board)
   .pagination
     %ul
       %li

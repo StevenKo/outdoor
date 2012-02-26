@@ -1,0 +1,7 @@
+%h3 New Topic
+= simple_form_for @topic, :url => board_topics_path(@board) do |f|
+  = render :partial => 'form', :locals => { :f => f}
+  tags
+  = text_area :text ,"tag_area",:cols => false, :rows => false
+  = f.submit
+  

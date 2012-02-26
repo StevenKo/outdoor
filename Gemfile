@@ -64,6 +64,8 @@ group :test, :development do
   gem 'factory_girl_rails'
 end
 
+gem "simple_form"
+
 #mail
 gem 'madmimi'
 

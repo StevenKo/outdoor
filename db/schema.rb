@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20120222124708) do
     t.datetime "updated_at"
   end
 
+  add_index "collect_user_topic_ships", ["topic_id"], :name => "index_collect_user_topic_ships_on_topic_id"
+  add_index "collect_user_topic_ships", ["user_id"], :name => "index_collect_user_topic_ships_on_user_id"
+
   create_table "posts", :force => true do |t|
     t.integer  "topic_id"
     t.integer  "user_id"
@@ -79,7 +82,7 @@ ActiveRecord::Schema.define(:version => 20120222124708) do
     t.integer  "board_id"
     t.integer  "user_id"
     t.string   "title"
-    t.string   "description"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -93,6 +96,9 @@ ActiveRecord::Schema.define(:version => 20120222124708) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "user_references", ["follower_user_id"], :name => "index_user_references_on_follower_user_id"
+  add_index "user_references", ["target_user_id"], :name => "index_user_references_on_target_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
