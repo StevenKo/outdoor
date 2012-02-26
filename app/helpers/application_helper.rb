@@ -4,7 +4,7 @@ module ApplicationHelper
     content_tag :div, :class => "pull-right" do
       if current_user.present?
         raw(
-          "歡迎你" + current_user.name + image_tag(current_user.avatar.thumb.small.url)+ tag("br")+
+          "歡迎你" + current_user.name + image_tag(current_user.avatar.thumb.small.url)+
           content_tag( :div, :class => "btn" )do
             link_to "登出",logout_path
           end

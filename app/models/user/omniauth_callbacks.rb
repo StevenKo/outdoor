@@ -35,7 +35,7 @@ class User
       user.email = "twitter+#{uid}@example.com" if provider == "twitter"
       user.email = "douban+#{uid}@example.com" if provider == "douban"
       
-      user.name = data["nickname"]
+      user.name = data["name"]
       user.name = data["name"] if provider == "google"
       user.name.gsub!(/[^\w]/, "_") unless user.name.blank?
       if User.where(:name => user.name).count > 0 || user.name.blank?

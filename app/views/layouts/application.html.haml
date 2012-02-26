@@ -7,13 +7,14 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #topbar.topbar
-      =render :partial => "_partials/topbar"
-    #container.container-fluid
-      .row-fluid
-        .span10
-          =yield
-        .span2
-          =render :partial => "_partials/sidebar"
-    #footer
-      =render :partial => "_partials/footer"
+    #container
+      #topbar.topbar
+        =render :partial => "_partials/topbar"
+      #body.container-fluid
+        .row-fluid
+          .span10
+            =yield
+          .span2
+            =render :partial => "_partials/sidebar"
+      #footer
+        =render :partial => "_partials/footer"

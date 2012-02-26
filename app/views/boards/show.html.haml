@@ -24,15 +24,14 @@
   .box
     -@imheight = (95).to_s + "px"
     .thumbnail-image= image_tag( lorem_image("95X95px"), :alt => "",:height=> @imheight)
-    .topic
-      %header
-        %a{:href => "#"} This is the topic
-      by
-      %a{:href => "#"}= lorem_name
-      %span.divider /
-      .date= lorem_date 
-      %article Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      .topic-link
-        %a{:href => "#"} 閱讀全文
-        %span |
-        %a{:href => "#"} 查看留言
+    %header
+      %a{:href => "#"} This is the topic
+    by
+    %a{:href => "#"}= lorem_name
+    %span.divider /
+    .date= lorem_date 
+    %article Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    .topic-link
+      %a{:href => "#"} 閱讀全文
+      %span |
+      %a{:href => "#"} 查看留言
