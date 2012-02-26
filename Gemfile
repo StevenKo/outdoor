@@ -41,6 +41,8 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'mini_magick'
 gem 'flash_cookie_session', :git => 'git://github.com/trevorturk/flash_cookie_session.git'
+gem 'plupload-rails'
+
 
 # 效能相關
 gem 'cells'
