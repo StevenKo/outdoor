@@ -9,13 +9,29 @@
   %body
     #fb-root
     :javascript
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=240126509407151";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      window.fbAsyncInit = function() {
+          //Your app details here
+          FB.init({appId: '240126509407151', status: true, cookie: true, xfbml: true});
+          //Resize the iframe when needed
+          FB.Canvas.setAutoResize();
+      };
+
+      //Load the SDK asynchronously
+      (function() {
+          var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol +
+            '//connect.facebook.net/zh_TW/all.js';
+          document.getElementById('fb-root').appendChild(e);
+      }());
+    / #fb-root
+    /     :javascript
+    /       (function(d, s, id) {
+    /         var js, fjs = d.getElementsByTagName(s)[0];
+    /         if (d.getElementById(id)) return;
+    /         js = d.createElement(s); js.id = id;
+    /         js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=240126509407151";
+    /         fjs.parentNode.insertBefore(js, fjs);
+    /       }(document, 'script', 'facebook-jssdk'));
     #container
       #topbar.topbar
         =render :partial => "_partials/topbar"

@@ -16,7 +16,7 @@ NewOutdoor::Application.routes.draw do
   
   resources :users, :except => [:new, :create, :destroy] do
     get "posts", :on => :member
-    get "collects", :on => :member
+    get "collections", :on => :member
     get "followers", :on => :member
     get "idols", :on => :member 
   end

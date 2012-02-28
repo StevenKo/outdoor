@@ -21,9 +21,13 @@
       %li
         %a{:href => "#"} Next
 -5.times do   
-  .box
-    -@imheight = (95).to_s + "px"
-    .thumbnail-image= image_tag( lorem_image("95X95px"), :alt => "",:height=> @imheight)
+  .mybox
+    #twitter.sharrre{"data-text" => "Make your sharing widget with Sharrre (jQuery Plugin)", "data-title" => "Tweet", "data-url" => "http://sharrre.com/"}
+      .box
+        %a.count{:href => "#"} 528
+        %a.share{:href => "#"} 閱讀數
+    / -@imheight = (95).to_s + "px"
+    /     .thumbnail-image= image_tag( lorem_image("95X95px"), :alt => "",:height=> @imheight)
     %header
       %a{:href => "#"} This is the topic
     by
