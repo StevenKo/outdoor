@@ -1,0 +1,12 @@
+= render :partial => "user_nav", :locals => { :user => @user}
+
+
+
+:javascript    
+  (function() {
+
+  $(function() {
+  return $(".nav.nav-pills li:eq(#{@nav_num})").addClass("active");
+  });
+
+  }).call(this);

@@ -1,0 +1,14 @@
+.subnav
+  %ul.nav.nav-pills
+    %li
+      = link_to "基本資料", user_path(user)
+    %li
+      = link_to "發表的文章", posts_user_path(user)
+    %li
+      = link_to "收藏的文章", collections_user_path(user)
+    %li
+      = link_to "關注的人", idols_user_path(user)
+    %li
+      = link_to "關注你的人", followers_user_path(user)
+    %li
+      = link_to "訊息", user_path(user)

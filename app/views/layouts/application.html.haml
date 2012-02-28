@@ -7,14 +7,23 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=240126509407151";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     #container
       #topbar.topbar
         =render :partial => "_partials/topbar"
       #body.container-fluid
         .row-fluid
-          .span10
+          .span9
             =yield
-          .span2
+          .span3
             =render :partial => "_partials/sidebar"
       #footer
         =render :partial => "_partials/footer"

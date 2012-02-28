@@ -1,34 +1,32 @@
-.span10
-  .subnav
-    %ul.nav.nav-pills
-      %li.active
-        %a{:href => "#"} 基本資料
-      %li
-        %a{:href => "#"} 發表的文章
-      %li
-        %a{:href => "#"} 收藏的文章
-      %li
-        %a{:href => "#"} 關注的人
-      %li
-        %a{:href => "#"} 關注你的人
-      %li
-        %a{:href => "#"} 訊息
-  %p
-    name:
-    = @user.name
-  %p
-    email:
-    = @user.email
-  %p
-    image:
-    = image_tag(@user.avatar,:alt=>"")
-  %p
-    關注的人
-    - @idols.each do |t|
-      t.name
-      <br>
-  %p
-    收藏文章
-    - @collect_topics.each do |t|
-      t.title
-      <br>  
+= render :partial => "user_nav", :locals => { :user => @user}
+%p
+  帳號:
+  = display_name @user.name
+%p
+  e-mail:
+  = @user.email
+%p
+  大頭照:
+  %br
+  = image_tag(@user.avatar,:alt=>"")
+%p
+  註冊日期:
+  = @user.created_at
+%p
+  關注的人
+  - @idols.each do |t|
+    t.name
+    <br>
+%p
+  收藏文章
+  - @collect_topics.each do |t|
+    t.title
+    <br>
+:javascript    
+  (function() {
+
+  $(function() {
+  return $(".nav.nav-pills li:eq(#{@nav_num})").addClass("active");
+  });
+
+  }).call(this);

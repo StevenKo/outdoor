@@ -116,6 +116,9 @@ GEM
     jquery-rails (1.0.19)
       railties (~> 3.0)
       thor (~> 0.14)
+    jquery-ui-rails (0.2.2)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.6.5)
     lorem (0.1.2)
     madmimi (1.0.15)
@@ -253,6 +256,7 @@ DEPENDENCIES
   flash_cookie_session!
   haml
   jquery-rails
+  jquery-ui-rails
   json
   lorem
   madmimi
