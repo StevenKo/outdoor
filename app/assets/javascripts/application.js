@@ -20,3 +20,9 @@
 //= require plupload.flash        
 //= require plupload.silverlight    
 //= require plupload.html5
+
+//= require jquery.flexslider-min
+
+$(window).load(function() {
+			$('.flexslider').flexslider();
+		});
