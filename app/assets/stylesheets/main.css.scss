@@ -1,11 +1,17 @@
 @import "compass";
 @include global-reset;
 @import "box";
-@import "topbar";
 
+
+body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
 
 #container{
-	margin-top: 70px;
 	padding-bottom: 60px;
 }
 
