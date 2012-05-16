@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user! ,:only => [ :new , :create , :edit , :update , :destroy ]
-  before_filter :find_topic, :only => [ :new , :create ]
+  # before_filter :find_topic, :only => [ :new , :create ]
   def new
-    @post = @topic.posts.build
+    @post = Post.new
+    # @post = @topic.posts.build
   end
   
   def create
