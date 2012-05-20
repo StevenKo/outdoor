@@ -4,24 +4,27 @@
 
 
 body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: rgba(241,241,241,0.5);
+}
+
+.sidebar-nav {
         padding: 9px 0;
-      }
+}
 
 #container{
 	padding-bottom: 60px;
 }
 
 footer {
-            position:absolute;
-			   bottom:0;
-			   width:100%;
-			   height:60px;   /* Height of the footer */
-            background: #f3f0f0;
-            padding-left: 20px;
+	    background: none repeat scroll 0 0 #CDC4B4;
+	    color: #FFFFFF;
+	    font-size: 12px;
+	    height: 50px;
+	    margin: 20px auto 0;
+	    padding-bottom: 60px;
+	    width: 975px;
 }
 
 .group:before, .group:after {

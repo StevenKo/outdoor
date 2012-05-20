@@ -1,0 +1,42 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "compass";
+
+.index_box {
+    float:left;
+    margin: 0 0 10px 5px;
+	width: 200px;
+	padding: 10px;
+	background: white;
+	@include box-shadow(0 2px 5px rgba(#000,.3));
+	@include border-radius(5px);
+	.single-comment{
+		border-top: 1px solid #ccc;
+		border-bottom: 2px solid #ccc;
+		background: #f1f1f1;
+		font-size: 12px;
+		padding: 10px 15px 15px 50px;
+		margin: 0 -10px -10px;
+		.date{
+			float:right;
+			color: #ccc;
+			font-size: 12px;
+		}
+		.buddy-icon{
+			float: left;
+			margin-left: -40px;
+		}
+		.username{
+			line-height: 1.2;
+		}
+		.message{
+			line-height: 1.2;
+		}
+		&:last-child{
+			@include border-radius(0 0 5px 5px);
+		}
+	
+	}
+}

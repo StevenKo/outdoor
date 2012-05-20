@@ -22,6 +22,8 @@
 //= require plupload.html5
 
 //= require jquery.flexslider-min
+//= require jquery.masonry.min
+//= require footer
 
 $(window).load(function() {
 			$('.flexslider').flexslider();

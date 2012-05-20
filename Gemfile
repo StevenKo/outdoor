@@ -78,6 +78,8 @@ gem 'acts-as-taggable-on', '~> 2.2.2'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',:git => 'git://github.com/anjlab/bootstrap-rails.git'
 
+gem 'lorem'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,4 +1,4 @@
-class BoardsController < ApplicationController
+class Forum::BoardsController < ApplicationController
   
   def index
     @boards = Board.all

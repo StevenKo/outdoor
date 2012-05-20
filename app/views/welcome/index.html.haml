@@ -11,14 +11,12 @@
       = image_tag "inacup_donut.jpg"
     %li
       = image_tag "inacup_vanilla.jpg"
-.board_box
-  - @boards_array.each_with_index do |board, index|
-    .row-fluid 
-      -board.each do |b|
-        .span4
-          %h2= b.title
-          %p= b.description
-          %p
-            =link_to "進入... »",board_path(b), :class => :btn
-    %hr
-
+#index_box_container
+  - 12.times do
+    .index_box
+      -@imheight = (rand(20)*10 +150).to_s + "px"
+      = image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight)
+      %ul
+        %li= link_to("我喜歡","#", :class => "icon-star")
+        %li= link_to("評論","#", :class => "icon-comment")
+  

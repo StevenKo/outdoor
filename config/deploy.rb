@@ -37,4 +37,4 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:copy_config_files" # 如果將database.yml放在shared下，請打開
-after "deploy:finalize_update", "deploy:update_symlink" # 如果有實作使用者上傳檔案到public/system，請打開
+# after "deploy:finalize_update", "deploy:update_symlink" # 如果有實作使用者上傳檔案到public/system，請打開

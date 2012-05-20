@@ -1,28 +1,36 @@
 NewOutdoor::Application.routes.draw do
-  
-  
+
+
   devise_for :users, :controllers => {
-      :registrations => "registrations",
-      :omniauth_callbacks => "users/omniauth_callbacks"
+    :registrations => "registrations",
+    :omniauth_callbacks => "users/omniauth_callbacks"
   } do
-      get "logout" => "devise/sessions#destroy"
+    get "logout" => "devise/sessions#destroy"
   end
-  
-  resources :boards do
-    resources :topics 
+
+  namespace :forum do
+    resources :boards do
+      resources :topics
+    end
+    resources :posts
   end
-  
-  resources :posts
-  
+
+  resources :posts do
+    collection do
+      get 'popular'
+      get 'latest'
+    end
+  end
+
   resources :users, :except => [:new, :create, :destroy] do
     get "posts", :on => :member
     get "collections", :on => :member
     get "followers", :on => :member
-    get "idols", :on => :member 
+    get "idols", :on => :member
   end
-  
-  post "pictures/upload" 
-   
+
+  post "pictures/upload"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -72,7 +80,7 @@ NewOutdoor::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'boards#index'
+  root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
