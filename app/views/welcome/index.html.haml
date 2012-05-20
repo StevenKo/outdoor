@@ -11,12 +11,17 @@
       = image_tag "inacup_donut.jpg"
     %li
       = image_tag "inacup_vanilla.jpg"
-#index_box_container
+#index_box_container.index_box_container.center
   - 12.times do
     .index_box
       -@imheight = (rand(20)*10 +150).to_s + "px"
       = image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight)
-      %ul
-        %li= link_to("我喜歡","#", :class => "icon-star")
-        %li= link_to("評論","#", :class => "icon-comment")
-  
+      .user-info
+        .user-image= image_tag( lorem_image("50x50"), :alt => "",:height=> @imheight)
+        .user-name= lorem_name
+        .count-info
+          %ul
+            %li= link_to("我喜歡","#", :class => "icons-star")
+            %li= link_to("評論","#", :class => "icons-eye")
+
+.fb-like-box{"data-header" => "true", "data-height" => "265", "data-href" => "http://www.facebook.com/myoutdoorgears", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "920"} 

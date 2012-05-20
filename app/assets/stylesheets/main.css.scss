@@ -1,6 +1,7 @@
 @import "compass";
 @include global-reset;
 @import "box";
+@import "icons";
 
 
 body {
@@ -25,6 +26,10 @@ footer {
 	    margin: 20px auto 0;
 	    padding-bottom: 60px;
 	    width: 975px;
+}
+
+.center {
+	margin: 0 auto;
 }
 
 .group:before, .group:after {

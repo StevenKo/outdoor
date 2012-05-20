@@ -4,6 +4,10 @@
 
 @import "compass";
 
+.index_box_container{
+	padding: 40px 0;
+}
+
 .index_box {
     float:left;
     margin: 0 0 10px 5px;
@@ -39,4 +43,35 @@
 		}
 	
 	}
+}
+
+.user-info{
+	width: 200px;
+	float: left;
+	padding: 10px 0;
+	font-size:12px;
+	.user-image{
+		float: left;
+		display: inline;
+	}
+	.user-name{
+		float: left;
+		padding: 0 10px 10px 10px;
+	}
+	.count-info{
+		display: block;
+		li {
+			width: 65px;
+			float: right;
+		}
+		a{
+			float: left;
+			@include link-colors(#666);
+			@include hover-link;
+			padding-left: 26px;
+			line-height: 30px;
+		}	
+		@include clearfix;
+	}
+	@include clearfix;
 }
