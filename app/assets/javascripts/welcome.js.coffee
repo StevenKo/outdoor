@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 reload_masonry = ->
-	$('#index_box_container').masonry({
-    itemSelector : '.index_box',
+	$('#item_box_container').masonry({
+    itemSelector : '.item_box',
     isAnimated: true,
     isFitWidth: true
   });

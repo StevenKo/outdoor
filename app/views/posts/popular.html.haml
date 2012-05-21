@@ -1,0 +1,42 @@
+.test
+  .pagination.center
+    %ul
+      %li
+        %a{:href => "#"} Prev
+      %li.active
+        %a{:href => "#"} 1
+      %li
+        %a{:href => "#"} 2
+      %li
+        %a{:href => "#"} 3
+      %li
+        %a{:href => "#"} 4
+      %li
+        %a{:href => "#"} Next
+      
+#item_box_container.item_box_container.center
+  - 12.times do
+    .item_box
+      -@imheight = (rand(20)*10 +150).to_s + "px"
+      = image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight)
+      .user-info
+        .user-image= image_tag( lorem_image("50x50"), :alt => "",:height=> @imheight)
+        .user-name= lorem_name
+        .count-info
+          %ul
+            %li= link_to("我喜歡","#", :class => "icons-star")
+            %li= link_to("評論","#", :class => "icons-eye")
+.pagination.center
+  %ul
+    %li
+      %a{:href => "#"} Prev
+    %li.active
+      %a{:href => "#"} 1
+    %li
+      %a{:href => "#"} 2
+    %li
+      %a{:href => "#"} 3
+    %li
+      %a{:href => "#"} 4
+    %li
+      %a{:href => "#"} Next

@@ -32,6 +32,10 @@ footer {
 	margin: 0 auto;
 }
 
+.pagination{
+	@include clearfix;
+}
+
 .group:before, .group:after {
    content: "";
    display: table;

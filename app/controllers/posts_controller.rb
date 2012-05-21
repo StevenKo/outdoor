@@ -5,11 +5,9 @@ class PostsController < ApplicationController
     @post = Post.new
     # @post = @topic.posts.build
   end
-  
+
   def create
-
     @post = current_user.topics.build(params[:post])
-
     if @post.save
       redirect_to board_topic_path(@topic.board,@topic)
     else
@@ -17,10 +15,16 @@ class PostsController < ApplicationController
     end
   end
   
-  private
-  
-  def find_topic
-    @topic = Topic.find(params[:topic_id])
+  def popular
   end
   
+  def latest
+  end
+
+  private
+
+    def find_topic
+      @topic = Topic.find(params[:topic_id])
+    end
+
 end

@@ -36,10 +36,7 @@
         =render :partial => "_partials/topbar"
       #body.container-fluid
         .row-fluid
-          .span9
-            =yield
-          .span3
-            =render :partial => "_partials/sidebar"
+          =yield
       %footer
         =render :partial => "_partials/footer"
 = javascript_include_tag "application"
