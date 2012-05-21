@@ -1,3 +1,23 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass";
+.list-of-items ul li {
+    list-style-type: disc;
+    margin-top: 7px;
+}
+
+.post-user-info h3 {
+	    border-bottom: 1px solid #B6B6B6;
+	    box-shadow: 0 1px 0 #EEEEEF;
+	    color: #686868;
+	    font-size: 14px;
+	    line-height: 17px;
+	    margin-bottom: 10px;
+	    padding-bottom: 3px;
+	    text-transform: uppercase;
+	 .stats-tabs{
+		@include clearfix;
+		width: 100%;
+	}
+}

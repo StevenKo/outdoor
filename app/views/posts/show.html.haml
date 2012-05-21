@@ -1,0 +1,410 @@
+.span3
+  .list-of-items
+    %h3 相關裝備文章
+    %ul 
+      %li
+        =link_to "背包","#"
+        =content_tag(:span, "121", :class => "list-count")
+      %li
+        =link_to "手套","#"
+        =content_tag(:span, "15", :class => "list-count") 
+      %li
+        =link_to "睡袋","#"
+        =content_tag(:span, "191", :class => "list-count")
+      %li
+        =link_to "攀岩","#"
+        =content_tag(:span, "16", :class => "list-count")
+  %button{:class => "btn btn-success"}
+    收藏
+  .post-user-info
+    %h3 作者
+    .user-info
+      .user-image= image_tag( lorem_image("50x50"), :alt => "",:height=> @imheight)
+      .user-name= lorem_name
+    %ul.stats-tabs
+      %li
+        %a{:href => "/user/100001386398010/recipes"}
+          %span> 追踨
+          9
+      %li
+        %a{:href => "/user/100001386398010/dishes"}
+          %span> 粉絲
+          0
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 收藏
+          17
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 發表
+          10
+    
+.span9
+  %section
+    %header
+      %h1 〈糧食〉輕快風乾燥飯
+    %article
+      %header
+        %h1
+        輕快風乾燥飯介紹:
+        .msgcontent
+          %font{:size => "3"}
+            %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"}
+              %p.MsoNormal{:style => "MARGIN:0cm 0cm 0pt;"}
+                %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"}
+                %strong
+                  %span{:style => "FONT-SIZE:20pt;FONT-FAMILY:新細明體;"}
+                    %font{:color => "#ff0000"}
+                      輕快風乾燥飯介紹:
+                      %br/
+                  %font{:color => "#ffff00"} 背包客廚房系列:
+                %br
+                  本產品採站立夾鍊袋式包裝,內附控制水位之注水線標示,沸水可直接注入袋內, 熱水沖泡十分鐘即可食用,也可以用冷水沖泡或微波加熱喔！
+                  %br
+                    %strong>
+                      %font{:color => "#ffff00"}
+                        懶得煮飯系列:
+                        %br/
+                    以冷凍乾燥技術避免傳統乾燥食品的大量營養流失, 並保存食品之最佳風味與口感,沸水沖泡10分鐘即可食用。
+                    %br
+                      *以上資料來自輕快風網站
+                      %br
+                        %br
+                          %span{:style => "FONT-SIZE:20pt;FONT-FAMILY:新細明體;"}
+                            %strong
+                              %font{:color => "#ff0000"} 實物調理照片:
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_0{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/54/l/D1Ad2HLkSXoh4KSqSu2hhw.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 多種口味的輕快風乾燥飯
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_1{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/49/l/lG3WTMyfKxHrcs.amW8.ZA.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 首先當然是來秤重一下
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_2{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/48/l/Js3yTWHiWuDS39S_5DbMuw.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 背包客廚房系列比較重，單包重量132g
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_3{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/47/l/UTeozAEbkEfCn8.loG0wfA.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 另一種口味也來秤一下
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_4{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/46/l/o2fZ5GzlC7sHvorUBvKVMQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 海帶芽拌飯比較輕
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_5{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/45/l/tXX.ehvEYBeTNsZb0ZEMfQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 懶得煮飯系列秤重
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_6{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/44/l/0rT.EQuoY_SS.HDk6gZJOw.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 單包重量只有89g
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_7{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/43/l/pJFLkNRUp0ihk0Uv1YppwA.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 首次試煮所使用的器材
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_8{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/50/l/cCrc.DCisFR_TcFdlEgpVQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 包裝袋上都有完整煮食說明
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_9{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/39/l/_r8lccMXNqLrfcWVPAGr_w.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 用自製酒精爐組煮水
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_10{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/42/l/3P68S_VcaEaGjAd0tWABZg.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 第一次試煮的是咖哩口味，打開包裝後記得先將袋內脫氧劑取出
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_11{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/40/l/PMeyorONbzy6yQQYh2_RMQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 這包乾燥飯的內容看來十分豐盛
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_12{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/36/l/SDUT8SqyPNUnbnWVraow4A.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 倒入熱水
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_13{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/35/l/VD0ZWigUu2bhtReJaX9qkw.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 先攪拌一下
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_14{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/34/l/YNPyl0DbnFHOUOC8IkC2kw.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 再加水至注水線
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_15{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/33/l/hJwJMgpxBAqOHEDI00_8dA.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 接下來直接把袋口封住就可以了，真的很方便
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_16{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/29/l/e1rJZ3OUiz0cp8aWBrFiVw.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 十分鐘後開封就完成了
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_17{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/27/l/SHTO363uYqolsbPq_Lrg2Q.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 倒出來一包份量真的很多
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_18{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/28/l/blRh57q1zzjl0FsqjWiBcQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 咖哩口味微辣很開胃，個人是很喜歡
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_19{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/26/l/t79R2YB0D.lECAr_p5fSRQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 基本上米飯不會糊在一起口感不錯
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_20{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/45/l/kiI4C9zleykgH8lijoQAlg.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 接下來試煮筍香豬油和海帶芽拌飯二種口味
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_21{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/43/l/Sf1w6jmrMxWiSfRdTQsa5Q.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 一樣倒入熱水
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_22{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/42/l/51RglZgi8PNK2QDUUMYx.A.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 筍香豬油還有個油包要記得加
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_23{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/41/l/xzkLF4F7ueKHvFhPrvobqA.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 再來封住袋口就好了
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_24{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/39/l/6Fz4MBRq3mkRTf9ydB3vsQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 十分鐘後美味出爐
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_25{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/40/l/_BHEZPRwXQB5Qaf8xsxCsQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 筍香豬油拌飯配料十分豐富
+              %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                  %img#ll_26{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/36/l/K7PXMZ6bZrIMqBL5kleDxQ.jpg"}
+                    %br
+                      %strong
+                        %font{:color => "#ff7f00"} ↑
+                      %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 海帶芽拌飯則是口感清爽
+                      %br
+                        %img#ll_27{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/35/l/dT2HaLqHYirqurZbxnCC.Q.jpg"}
+                          %br
+                            %strong
+                              %font{:color => "#ff7f00"} ↑
+                            %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 輕快風乾燥飯試煮成功
+              %p.MsoNormal{:style => "MARGIN:0cm 0cm 0pt;"}
+                %span{:style => "FONT-SIZE:20pt;FONT-FAMILY:新細明體;"}
+                  %strong
+                    %font{:color => "#ff0000"} 試吃分享:
+                %br
+                  糧食是我登山輕量化目標中極重要的一環，要找到能搭配酒精爐具特性又要能烹調省時、省水、省燃料，因此脫水食物就是我的最佳選擇。
+                  %br
+                    %br
+                      不過由於國內的飲食習慣，在找尋脫水食物商品過程並不是很順利，在試吃過美國的脫水通心麵和慈濟的香積飯後，很高興這次由輕快風這家本土製做乾燥食物的廠商提供了多種口味的乾燥飯讓我有機會試吃並與大家分享。
+                      %br
+                        %br
+                          我目前試吃了背包客廚房的這一系列乾燥飯，基本上調理過程十分簡單，我使用酒精爐炊具來煮水，在水滾後依照袋内加水指示線加入熱水再攪拌一下(記得袋內脫氧劑要先取出)，接下來只要把袋口封好即可，等待十分鐘後即可開封食用。
+                          %br
+                            %br
+                              第一次所試吃的是咖哩雞肉口味，悶煮完後倒出來的份量多到讓我覺得吃驚，而吃起來口感微辣很開胃我還蠻喜歡的。第二次試吃的則是海帶芽和筍香豬油拌飯，海帶芽拌飯口感清爽，食材中到的薑吃起來和新鮮的幾乎沒二樣。豬油拌飯比較特別是還附上油包，口味上比較濃郁。
+                              %br
+                                %br
+                                  %span{:style => "FONT-SIZE:20pt;FONT-FAMILY:新細明體;"}
+                                    %strong
+                                      %font{:color => "#ff0000"} 整體評論：
+                                  %span{:lang => "EN-US", :style => "FONT-SIZE:20pt;FONT-FAMILY:Verdana;"}
+                                    %br/
+                                  = succeed "&nbsp;" do
+                                    %span{:style => "FONT-SIZE:16pt;FONT-FAMILY:新細明體;"}
+                                      %strong
+                                        %font{:color => "#ff7f00"} 優點：
+                                  %br
+                                    %font{:color => "#ff7f00"}> ★
+                                    份量夠多，配料豐富：
+                                    %br
+                                      目前試吃的三種口味配料都十分豐富，不但視覺上更美觀，食用上更能提升口感。經過二次試吃，輕快風乾燥飯的份量一個男生一餐就可以吃的很飽，黑妹試吃的結果是吃不太完一整包。
+                                      %br
+                                        %font{:color => "#ff7f00"}> ★
+                                        背包客廚房系列包裝袋可以直接做為悶煮使用：
+                                        %br
+                                          這點是我覺得最方便的設計。如果在山上像香積飯一悶就要半個小時，那就可能需要像AGG這樣的保溫碗，這一個重量也要57克，如果是可以直以包裝袋悶煮還可以省下不少重量(連碗都不用帶了)。
+                                          %br
+                                            %font{:color => "#ff7f00"}> ★
+                                            悶煮時間短：
+                                            %br
+                                              香積飯要悶二十五至三十分鐘、尾西的乾燥飯約15分鐘、Enteria的脫水通心麵要先煮四分鐘再悶7-10分，輕快風的乾燥飯只要十分鐘就可以食用，相對來說是比較省時的。
+                                              %br
+                                                %font{:color => "#ff7f00"}> ★
+                                                口味種類多：
+                                                %br
+                                                  輕快風一共有七八種口味乾燥飯可以讓你有更多選擇，規畫長天數活動菜單也不容易重複，除此之外輕快風未來還會推出乾燥米可以單獨做為主食使用上便利性會更加提高。
+                                                  %br
+                                                    %br
+                                                      %span{:style => "FONT-SIZE:16pt;FONT-FAMILY:新細明體;"}>
+                                                        %strong
+                                                          %font{:color => "#0080ff"} 缺點：
+                                                      \ 
+                                                      %br
+                                                        %font{:color => "#0080ff"}> ☆
+                                                        重量：
+                                                        %br
+                                                          和香積飯一份70克左右相較下輕快風的產品*重量是比較重，不過這點也是因為它的優點─份量多、包裝袋可以直接悶煮而來，所以這只能說一體的二面，而且這幾十克重量，除非你是連一克都在計較的人，不然差距實在是很小。
+                                                          %br
+                                                            %font{:color => "#0080ff"}> ☆
+                                                            價格：
+                                                            %br
+                                                              如果和香積飯單包價格當然是沒得比，但老實說和相似的日本進口乾燥飯或美國脫水通心麵來比它可算是便宜的。
+                                                              %br
+                                                                %br
+                                                                  總體來說我覺得輕快風這一系列的乾燥飯是相當不錯的產品，也符合登山輕量化的糧食計畫使用，九月四秀活動我會帶上山做為主要糧食，未來還會有後續的使用分享，敬請期待。
+                                                                  %br
+                                                                    %br
+                                                                      *這裡指的是背包客廚房系列的產品，懶得煮飯系列只比香積飯一份重上十多克而已。
+                                                                      %br
+                                                                        %br
+                                                                          %span{:style => "FONT-SIZE:20pt;FONT-FAMILY:新細明體;"}
+                                                                            %strong
+                                                                              %font{:color => "#ff0000"} 延伸閱讀：
+                                                                          %span{:lang => "EN-US", :style => "FONT-SIZE:20pt;FONT-FAMILY:Verdana;"}
+                                                                            %br/
+                                                                          %a{:href => "http://store.pchome.com.tw/light_n_light/"}
+                                                                            輕快風網路商店
+                                                                            %br/
+                                                                          %a{:href => "http://www.wretch.cc/blog/taiwanrice"}
+                                                                            輕快風部落格
+                                                                            %br/
+                                                                          %a{:href => "http://tw.myblog.yahoo.com/joe64r/article?mid=26903&prev=27052&next=24751&l=f&fid=87"}
+                                                                            香積飯試煮試吃
+                                                                            %br/
+                                                                          %br 山行者豪哥 2009/09/21
+          %script{:language => "JavaScript"}
+            var imgGroup = new YAHOO.util.ImageLoader.group(window, 'scroll');
+            imgGroup.foldConditional = true;
+            imgGroup.addTrigger(window, 'resize');
+            imgGroup.registerSrcImage('ll_0', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/54/l/D1Ad2HLkSXoh4KSqSu2hhw.jpg');
+            imgGroup.registerSrcImage('ll_1', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/49/l/lG3WTMyfKxHrcs.amW8.ZA.jpg');
+            imgGroup.registerSrcImage('ll_2', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/48/l/Js3yTWHiWuDS39S_5DbMuw.jpg');
+            imgGroup.registerSrcImage('ll_3', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/47/l/UTeozAEbkEfCn8.loG0wfA.jpg');
+            imgGroup.registerSrcImage('ll_4', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/46/l/o2fZ5GzlC7sHvorUBvKVMQ.jpg');
+            imgGroup.registerSrcImage('ll_5', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/45/l/tXX.ehvEYBeTNsZb0ZEMfQ.jpg');
+            imgGroup.registerSrcImage('ll_6', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/44/l/0rT.EQuoY_SS.HDk6gZJOw.jpg');
+            imgGroup.registerSrcImage('ll_7', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/43/l/pJFLkNRUp0ihk0Uv1YppwA.jpg');
+            imgGroup.registerSrcImage('ll_8', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/50/l/cCrc.DCisFR_TcFdlEgpVQ.jpg');
+            imgGroup.registerSrcImage('ll_9', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/39/l/_r8lccMXNqLrfcWVPAGr_w.jpg');
+            imgGroup.registerSrcImage('ll_10', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/42/l/3P68S_VcaEaGjAd0tWABZg.jpg');
+            imgGroup.registerSrcImage('ll_11', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/40/l/PMeyorONbzy6yQQYh2_RMQ.jpg');
+            imgGroup.registerSrcImage('ll_12', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/36/l/SDUT8SqyPNUnbnWVraow4A.jpg');
+            imgGroup.registerSrcImage('ll_13', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/35/l/VD0ZWigUu2bhtReJaX9qkw.jpg');
+            imgGroup.registerSrcImage('ll_14', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/34/l/YNPyl0DbnFHOUOC8IkC2kw.jpg');
+            imgGroup.registerSrcImage('ll_15', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/33/l/hJwJMgpxBAqOHEDI00_8dA.jpg');
+            imgGroup.registerSrcImage('ll_16', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/29/l/e1rJZ3OUiz0cp8aWBrFiVw.jpg');
+            imgGroup.registerSrcImage('ll_17', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/27/l/SHTO363uYqolsbPq_Lrg2Q.jpg');
+            imgGroup.registerSrcImage('ll_18', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/28/l/blRh57q1zzjl0FsqjWiBcQ.jpg');
+            imgGroup.registerSrcImage('ll_19', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/26/l/t79R2YB0D.lECAr_p5fSRQ.jpg');
+            imgGroup.registerSrcImage('ll_20', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/45/l/kiI4C9zleykgH8lijoQAlg.jpg');
+            imgGroup.registerSrcImage('ll_21', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/43/l/Sf1w6jmrMxWiSfRdTQsa5Q.jpg');
+            imgGroup.registerSrcImage('ll_22', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/42/l/51RglZgi8PNK2QDUUMYx.A.jpg');
+            imgGroup.registerSrcImage('ll_23', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/41/l/xzkLF4F7ueKHvFhPrvobqA.jpg');
+            imgGroup.registerSrcImage('ll_24', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/39/l/6Fz4MBRq3mkRTf9ydB3vsQ.jpg');
+            imgGroup.registerSrcImage('ll_25', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/40/l/_BHEZPRwXQB5Qaf8xsxCsQ.jpg');
+            imgGroup.registerSrcImage('ll_26', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/36/l/K7PXMZ6bZrIMqBL5kleDxQ.jpg');
+            imgGroup.registerSrcImage('ll_27', 'http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/35/l/dT2HaLqHYirqurZbxnCC.Q.jpg');
+          / social sharing start
+          :css
+            .msgcontent .wsharing ul li { text-indent: 0; }
+          .wsharing.bottom{:onmouseout => "getElementsByTagName('div')[1].style.display = 'none';", :onmouseover => "getElementsByTagName('div')[1].style.display = 'block';"}
+            .hd
+              %h5#univshar-btn{:title => "分享出去"} 分享
+              %span.shortcut
+                %a.fb{:href => "http://tw.rd.yahoo.com/referurl/twblog/shareout/article/facebook/SIG=15rudaelh/*http%3A//www.facebook.com/sharer.php?u=http%3A%2F%2Ftw.rd.yahoo.com%2Freferurl%2Ftwblog%2Fclickback%2Farticle%2Ffb%2F%2Ahttp%3A%2F%2Ftw.myblog.yahoo.com%2Fjoe64r%2Farticle%3Fmid%3D28817", :target => "_blank", :title => "分享到 Facebook"} Facebook
+                %a.plurk{:href => "http://tw.rd.yahoo.com/referurl/twblog/shareout/article/plurk/SIG=1cm8vmr7g/*http%3A//www.plurk.com/?qualifier=shares&status=http%3A%2F%2Ftw.rd.yahoo.com%2Freferurl%2Ftwblog%2Fclickback%2Farticle%2Fplurk%2F%2Ahttp%3A%2F%2Ftw.myblog.yahoo.com%2Fjoe64r%2Farticle%3Fmid%3D28817+%28%E3%80%88%E7%B3%A7%E9%A3%9F%E3%80%89%E8%BC%95%E5%BF%AB%E9%A2%A8%E4%B9%BE%E7%87%A5%E9%A3%AF+-+%E5%B1%B1%E8%A1%8C%E8%80%85%E8%B1%AA%E5%93%A5%E7%9A%84Yahoo%21%E5%A5%87%E6%91%A9%E9%83%A8%E8%90%BD%E6%A0%BC%29", :target => "_blank", :title => "分享到 Plurk"} Plurk
+                %a.yim{:href => "ymsgr:customstatus?%E3%80%88%E7%B3%A7%E9%A3%9F%E3%80%89%E8%BC%95%E5%BF%AB%E9%A2%A8%E4%B9%BE%E7%87%A5%E9%A3%AF+-+%E5%B1%B1%E8%A1%8C%E8%80%85%E8%B1%AA%E5%93%A5%E7%9A%84Yahoo%21%E5%A5%87%E6%91%A9%E9%83%A8%E8%90%BD%E6%A0%BC+http%3A%2F%2Ftw.rd.yahoo.com%2Freferurl%2Ftwblog%2Fclickback%2Farticle%2Fymsg%2F%2Ahttp%3A%2F%2Ftw.myblog.yahoo.com%2Fjoe64r%2Farticle%3Fmid%3D28817", :title => "分享到 Yahoo! Messenger"} YAHOO!
+              %span.endrc
+            .bd
+              %ul
+                %li.fb
+                  %a{:href => "http://tw.rd.yahoo.com/referurl/twblog/shareout/article/facebook/SIG=15rudaelh/*http%3A//www.facebook.com/sharer.php?u=http%3A%2F%2Ftw.rd.yahoo.com%2Freferurl%2Ftwblog%2Fclickback%2Farticle%2Ffb%2F%2Ahttp%3A%2F%2Ftw.myblog.yahoo.com%2Fjoe64r%2Farticle%3Fmid%3D28817", :target => "_blank", :title => "分享到 Facebook"} 分享在我的 Facebook
+                %li.plurk
+                  %a{:href => "http://tw.rd.yahoo.com/referurl/twblog/shareout/article/plurk/SIG=1cm8vmr7g/*http%3A//www.plurk.com/?qualifier=shares&status=http%3A%2F%2Ftw.rd.yahoo.com%2Freferurl%2Ftwblog%2Fclickback%2Farticle%2Fplurk%2F%2Ahttp%3A%2F%2Ftw.myblog.yahoo.com%2Fjoe64r%2Farticle%3Fmid%3D28817+%28%E3%80%88%E7%B3%A7%E9%A3%9F%E3%80%89%E8%BC%95%E5%BF%AB%E9%A2%A8%E4%B9%BE%E7%87%A5%E9%A3%AF+-+%E5%B1%B1%E8%A1%8C%E8%80%85%E8%B1%AA%E5%93%A5%E7%9A%84Yahoo%21%E5%A5%87%E6%91%A9%E9%83%A8%E8%90%BD%E6%A0%BC%29", :target => "_blank", :title => "分享到 Plurk"} 分享在我的 Plurk
+                %li.yim
+                  %a{:href => "ymsgr:customstatus?%E3%80%88%E7%B3%A7%E9%A3%9F%E3%80%89%E8%BC%95%E5%BF%AB%E9%A2%A8%E4%B9%BE%E7%87%A5%E9%A3%AF+-+%E5%B1%B1%E8%A1%8C%E8%80%85%E8%B1%AA%E5%93%A5%E7%9A%84Yahoo%21%E5%A5%87%E6%91%A9%E9%83%A8%E8%90%BD%E6%A0%BC+http%3A%2F%2Ftw.rd.yahoo.com%2Freferurl%2Ftwblog%2Fclickback%2Farticle%2Fymsg%2F%2Ahttp%3A%2F%2Ftw.myblog.yahoo.com%2Fjoe64r%2Farticle%3Fmid%3D28817", :title => "分享到 Yahoo! 即時通"} 分享在我的即時通
+            .ft
+          / Social sharing end
+  .fb-comments{"data-href" => "http://example.com", "data-num-posts" => "10", "data-width" => "660"}
+      

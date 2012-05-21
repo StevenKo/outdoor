@@ -16,7 +16,7 @@
     - 12.times do
       .item_box
         -@imheight = (rand(20)*10 +150).to_s + "px"
-        = image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight)
+        =link_to image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight), post_path(1)
         .user-info
           .user-image= image_tag( lorem_image("50x50"), :alt => "",:height=> @imheight)
           .user-name= lorem_name
@@ -24,7 +24,6 @@
             %ul
               %li= link_to("我喜歡","#", :class => "icons-star")
               %li= link_to("評論","#", :class => "icons-eye")
-
-  .fb-like-box{"data-header" => "true", "data-height" => "265", "data-href" => "http://www.facebook.com/myoutdoorgears", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "920"}
 .span3
   =render :partial => "_partials/sidebar"
+.fb-like-box.center{"data-header" => "true", "data-height" => "265", "data-href" => "http://www.facebook.com/myoutdoorgears", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "920"}
