@@ -7,14 +7,15 @@ NewOutdoor::Application.routes.draw do
   } do
     get "logout" => "devise/sessions#destroy"
   end
-
+  
   namespace :forum do
     resources :boards do
       resources :topics
     end
     resources :posts
   end
-
+  match '/forum' => 'forum/boards#index', :as => :forum
+  
   resources :posts do
     collection do
       get 'popular'

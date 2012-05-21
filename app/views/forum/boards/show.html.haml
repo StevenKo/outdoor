@@ -5,7 +5,7 @@
   %li.active You are here
 .page-tool
   %li.btn 
-    = link_to "發表新主題", new_board_topic_path(@board)
+    = link_to "發表新主題", ''
   .pagination
     %ul
       %li
@@ -23,17 +23,18 @@
 -5.times do   
   .mybox
     #twitter.sharrre{"data-text" => "Make your sharing widget with Sharrre (jQuery Plugin)", "data-title" => "Tweet", "data-url" => "http://sharrre.com/"}
-      %a.count{:href => "#"} 528
+      %a.count{:href => "#"} 
+        =(rand(100)).to_s
       %a.share{:href => "#"} 閱讀數
     / -@imheight = (95).to_s + "px"
     /     .thumbnail-image= image_tag( lorem_image("95X95px"), :alt => "",:height=> @imheight)
     %header
-      %a{:href => "#"} This is the topic
+      %a{:href => "#",:class => "lipsum(1,50)"}
     by
     %a{:href => "#"}= lorem_name
     %span.divider /
     .date= lorem_date 
-    %article Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    %article{:href => "#",:class => "lipsum(2)"}
     .topic-link
       %a{:href => "#"} 閱讀全文
       %span |
