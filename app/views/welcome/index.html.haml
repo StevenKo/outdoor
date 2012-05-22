@@ -19,7 +19,7 @@
         =link_to image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight), post_path(1)
         .user-info
           .user-image= image_tag( lorem_image("50x50"), :alt => "",:height=> @imheight)
-          .user-name= lorem_name
+          .user-name= link_to "Steven Ko", user_path(1)
           .count-info
             %ul
               %li= link_to("我喜歡","#", :class => "icons-star")
