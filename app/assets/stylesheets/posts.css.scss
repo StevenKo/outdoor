@@ -7,7 +7,10 @@
     margin-top: 7px;
 }
 
-.post-user-info h3 {
+.post-user-info {
+  float: left;
+  width: 23%;
+	h3{
 	    border-bottom: 1px solid #B6B6B6;
 	    box-shadow: 0 1px 0 #EEEEEF;
 	    color: #686868;
@@ -16,8 +19,26 @@
 	    margin-bottom: 10px;
 	    padding-bottom: 3px;
 	    text-transform: uppercase;
-	 .stats-tabs{
-		@include clearfix;
-		width: 100%;
+	}
+}
+.post-text{
+	width: 70%;
+	float: left;
+}
+.post-content{
+	display:block;
+	@include clearfix;
+}
+
+.quick-comment{
+	margin: 10px 0;
+	.comment-title{
+		h1{
+			box-shadow: 0 1px 0 #EEEEEF;
+	    color: #686868;
+			font-size: 14px;
+			margin-bottom: 10px;
+	    padding-bottom: 3px;
+		}
 	}
 }

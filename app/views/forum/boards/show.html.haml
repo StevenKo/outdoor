@@ -1,6 +1,9 @@
 %ul.breadcrumb
   %li
-    =link_to "OutdoorGear",root_path 
+    =link_to "OutdoorGear 論壇",forum_boards_path 
+    %span.divider /
+  %li
+    =link_to "登山", ""
     %span.divider /
   %li.active You are here
 .page-tool
@@ -23,19 +26,18 @@
 -5.times do   
   .mybox
     #twitter.sharrre{"data-text" => "Make your sharing widget with Sharrre (jQuery Plugin)", "data-title" => "Tweet", "data-url" => "http://sharrre.com/"}
-      %a.count{:href => "#"} 
-        =(rand(100)).to_s
-      %a.share{:href => "#"} 閱讀數
+      =link_to (rand(100)).to_s, forum_board_topic_path(1,1), :class => :count
+      =link_to "閱讀數", forum_board_topic_path(1,1), :class => :share
     / -@imheight = (95).to_s + "px"
     /     .thumbnail-image= image_tag( lorem_image("95X95px"), :alt => "",:height=> @imheight)
     %header
-      %a{:href => "#",:class => "lipsum(1,50)"}
+      =link_to "",forum_board_topic_path(1,1),:class => "lipsum(1,50)"
     by
     %a{:href => "#"}= lorem_name
     %span.divider /
     .date= lorem_date 
     %article{:href => "#",:class => "lipsum(2)"}
     .topic-link
-      %a{:href => "#"} 閱讀全文
+      =link_to "閱讀全文",forum_board_topic_path(1,1)
       %span |
       %a{:href => "#"} 查看留言

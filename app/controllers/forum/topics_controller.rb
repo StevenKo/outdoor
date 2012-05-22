@@ -1,4 +1,4 @@
-class TopicsController < ApplicationController
+class Forum::TopicsController < ApplicationController
   before_filter :authenticate_user! ,:only => [ :new , :create , :edit , :update , :destroy ]
   
   def new

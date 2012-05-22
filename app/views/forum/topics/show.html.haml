@@ -1,0 +1,159 @@
+%ul.breadcrumb
+  %li
+    %a{:href => "#"} OutdoorGear
+    %span.divider /
+  %li.active You are here
+%ul.page-tool
+  %li.btn 
+    = link_to "發表新主題", new_forum_board_topic_path(@topic.board)
+  .pagination
+    %ul
+      %li
+        %a{:href => "#"} Prev
+      %li.active
+        %a{:href => "#"} 1
+      %li
+        %a{:href => "#"} 2
+      %li
+        %a{:href => "#"} 3
+      %li
+        %a{:href => "#"} 4
+      %li
+        %a{:href => "#"} Next
+.post-content
+  .post-user-info
+    .user-image= image_tag( lorem_image("100x120"), :alt => "")
+    .user-name= lorem_name
+    %ul.stats-tabs
+      %li
+        %a{:href => "/user/100001386398010/recipes"}
+          %span> 追踨
+          9
+      %li
+        %a{:href => "/user/100001386398010/dishes"}
+          %span> 粉絲
+          0
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 收藏
+          17
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 發表
+          10
+  .post-text
+    %section
+      %header
+        %h1 〈糧食〉輕快風乾燥飯
+      %article
+        %header
+          %h1
+          輕快風乾燥飯介紹:
+          .msgcontent
+            %font{:size => "3"}
+              %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"}
+                %p.MsoNormal{:style => "MARGIN:0cm 0cm 0pt;"}
+                  %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"}
+                  %strong
+                    %span{:style => "FONT-SIZE:20pt;FONT-FAMILY:新細明體;"}
+                      %font{:color => "#ff0000"}
+                        輕快風乾燥飯介紹:
+                        %br/
+                    %font{:color => "#ffff00"} 背包客廚房系列:
+                  %br
+                    本產品採站立夾鍊袋式包裝,內附控制水位之注水線標示,沸水可直接注入袋內, 熱水沖泡十分鐘即可食用,也可以用冷水沖泡或微波加熱喔！
+                    %br
+                      %strong>
+                        %font{:color => "#ffff00"}
+                          懶得煮飯系列:
+                          %br/
+                      以冷凍乾燥技術避免傳統乾燥食品的大量營養流失, 並保存食品之最佳風味與口感,沸水沖泡10分鐘即可食用。
+                      %br
+                        *以上資料來自輕快風網站
+                        %br
+                          %br
+                            %span{:style => "FONT-SIZE:20pt;FONT-FAMILY:新細明體;"}
+                              %strong
+                                %font{:color => "#ff0000"} 實物調理照片:
+                %p.MsoNormal{:align => "center", :style => "MARGIN:0cm 0cm 0pt;TEXT-ALIGN:center;"}
+                  %span{:lang => "EN-US", :style => "FONT-FAMILY:Verdana;"}
+                    %img#ll_0{:src => "http://blog.yimg.com/2/jCqnTSt7s5_u3_hRIdt.9woSo9J_xhTncLN1w24ws_IvIZRbXsNFpQ--/54/l/D1Ad2HLkSXoh4KSqSu2hhw.jpg"}
+                      %br
+                        %strong
+                          %font{:color => "#ff7f00"} ↑
+                        %span{:lang => "ZH-CN", :style => "FONT-FAMILY:Verdana;"} 多種口味的輕快風乾燥飯           
+.post-content
+  .post-user-info
+    .user-image= image_tag( lorem_image("100x120"), :alt => "")
+    .user-name= lorem_name
+    %ul.stats-tabs
+      %li
+        %a{:href => "/user/100001386398010/recipes"}
+          %span> 追踨
+          9
+      %li
+        %a{:href => "/user/100001386398010/dishes"}
+          %span> 粉絲
+          0
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 收藏
+          17
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 發表
+          10
+  .post-text
+    看起來相當不錯哦！
+.post-content
+  .post-user-info
+    .user-image= image_tag( lorem_image("100x120"), :alt => "")
+    .user-name= lorem_name
+    %ul.stats-tabs
+      %li
+        %a{:href => "/user/100001386398010/recipes"}
+          %span> 追踨
+          9
+      %li
+        %a{:href => "/user/100001386398010/dishes"}
+          %span> 粉絲
+          0
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 收藏
+          17
+      %li
+        %a{:href => "/user/100001386398010/followers"}
+          %span> 發表
+          10
+  .post-text
+    改天來試試看！
+    
+.quick-comment
+  .comment-title
+    %h1 快速回覆  
+  = simple_form_for @topic, :url => forum_posts_path(@board) do |f|
+    = render :partial => 'posts/form', :locals => { :f => f}
+    tags
+    = text_area :text ,"tag_area",:cols => false, :rows => false
+    = f.submit
+/ .box
+/   %a{:href => "#"}= lorem_name
+/   .thumbnail-image= image_tag( lorem_image("100X120px"), :alt => "",:height=> "120px")
+/   .topic
+/     %header
+/       %a{:href => "#"} This is the topic
+/     註冊日期:
+/     %span= lorem_date
+/     %br
+/     收藏
+/     -3.times do
+/       .thumbnail-image= image_tag( lorem_image("50X50px"), :alt => "",:height=> "50px")
+/     
+/     %article Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+/     .topic-link
+/       %a{:href => "#"} 回覆
+/       %span |
+/       %a{:href => "#"} 收藏
+/       -if @topic.user == current_user
+/         .btn= link_to "修改文章", edit_forum_board_topic_path

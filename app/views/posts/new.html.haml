@@ -1,5 +1,5 @@
 %h3 the topic title here
-%h3= @topic.title
+%h3
 = simple_form_for @post, :url => posts_path(:topic_id => @topic) do |f|
   = render :partial => 'form', :locals => { :f => f}
   tags
