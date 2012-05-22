@@ -5,20 +5,14 @@
 @import "compass";
 
 .brands{
-	display: block;
+  float:left;
 	li {
-		width: 200px;
-		height: 300px;
-		display:block;
+		float: left;
 	}
 	a{
 		@include link-colors(#666);
 		@include hover-link;
 		padding-left: 26px;
 		line-height: 30px;
-		width: 200px;
-		height: 300px;
-		display:block;
 	}	
-	@include clearfix;
 }
