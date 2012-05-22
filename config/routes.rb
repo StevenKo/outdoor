@@ -1,5 +1,6 @@
 NewOutdoor::Application.routes.draw do
 
+  resources :brands, :only => [:index]
 
   devise_for :users, :controllers => {
     :registrations => "registrations",

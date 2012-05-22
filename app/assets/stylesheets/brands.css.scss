@@ -1,0 +1,24 @@
+// Place all the styles related to the brands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "compass";
+
+.brands{
+	display: block;
+	li {
+		width: 200px;
+		height: 300px;
+		display:block;
+	}
+	a{
+		@include link-colors(#666);
+		@include hover-link;
+		padding-left: 26px;
+		line-height: 30px;
+		width: 200px;
+		height: 300px;
+		display:block;
+	}	
+	@include clearfix;
+}

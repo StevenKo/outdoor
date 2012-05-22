@@ -1,3 +1,8 @@
 $icons-spacing:20px;
 @import "icons/*.png";
 @include all-icons-sprites;
+
+
+$brands-spacing:40px;
+@import "brands/*.png";
+@include all-brands-sprites;
