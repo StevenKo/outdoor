@@ -1,13 +1,15 @@
-%h3 the topic title here
+%h3 文章標題：
 %h3
 = simple_form_for @post, :url => posts_path(:topic_id => @topic) do |f|
   = render :partial => 'form', :locals => { :f => f}
-  tags
+  %br
+  加入標籤：
+  %br
   = text_area :text ,"tag_area",:cols => false, :rows => false
-  = f.submit
+  %br
+  = f.button :submit, "發表"
 
 
-#filelist No runtime found.
 %br/
 %a#pickfiles{:href => "#"} [選擇圖片]
 %a#uploadfiles{:href => "#"} [上傳圖片]
