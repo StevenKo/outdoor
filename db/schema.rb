@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120607092402) do
+ActiveRecord::Schema.define(:version => 20120608081951) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -66,6 +66,10 @@ ActiveRecord::Schema.define(:version => 20120607092402) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.string   "picture"
+    t.integer  "like_count",   :default => 0
+    t.integer  "view_count",   :default => 0
+    t.boolean  "index_slider", :default => false
   end
 
   add_index "posts", ["topic_id"], :name => "index_posts_on_topic_id"

@@ -9,21 +9,6 @@
     .container-fluid
       .nav-collapse
         %ul.nav
-          %li
-            =link_to "OutdoorGear", root_path
-          %li.active
-            =link_to "首頁", root_path
-          %li
-            =link_to "論壇", forum_path
-          %li
-            =link_to "最受歡迎", popular_posts_path
-          %li
-            =link_to "最新發表", popular_posts_path
-          %li
-            =link_to "登山", popular_posts_path
-          %li
-            =link_to "二手裝備", popular_posts_path
-          %li
-            =link_to "品牌", brands_path
+          = nav_top_bar @top_nav_num
         .pull-right
           =sign_in_div

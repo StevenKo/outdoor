@@ -1,0 +1,30 @@
+- resource = resource_name = :user
+- params[:redirect_to] = url_for(:only_path => false)
+#myModal.modal.hide.fade
+  .modal-body.login
+    %a.close{"data-dismiss" => "modal"} ×
+    .signin{:style=>"width:500px;height:420px;"}
+      .login-box
+        = form_for(resource, :as => resource_name, :url => session_path(resource_name, :redirect_to => params[:redirect_to]), :html => { :class => 'box-login' }) do |f|
+          %p.word=t('users.sessions.title')
+          %fieldset{ :class => "form"}
+            %dl
+              %dt.data
+                %label.data=t('users.sessions.account')
+              %dd.keyin
+                = f.text_field :login, :value => "", :class=>"keyin"
+              %dt.data
+                %label.data=t('users.sessions.password')
+              %dd.keyin
+                = f.password_field :password, :value => "", :class=>"keyin"
+          %fieldset{ :class => "submit"}
+            %p
+              %input{ :type =>"submit", :value =>t('users.sessions.login'), :class =>"summit-buttons"}
+        .signup
+          %p
+            =t('users.sessions.word1')
+            %br
+          %p= link_to t('users.sessions.word3'), "http://member.fashionguide.com.tw/", :target => "_blank", :title=>"", :class=>"member-button" 
+        .fbconnect
+          %p=t('users.sessions.word4')
+          %p= link_to "Facebook Connect", my_omniauth_authorize_path(:user, :facebook), :title=>"Facebook Connect", :class=>"buttons-fbconnect"

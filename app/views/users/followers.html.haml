@@ -1,6 +1,10 @@
 = render :partial => "user_nav", :locals => { :user => @user}
 
-
+%header
+  %h1 關注你的人
+  .idols
+    - @fans.each do |idol|
+      = link_to image_tag(idol.avatar.thumb.middle), user_path(idol)
 
 :javascript    
   (function() {

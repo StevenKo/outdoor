@@ -1,2 +1,2 @@
-class Forum::PostsController < ApplicationController
+class Forum::PostsController < Forum::ForumController
 end

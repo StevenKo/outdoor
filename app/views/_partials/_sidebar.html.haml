@@ -2,30 +2,14 @@
   熱門文章
   %ul.nav.nav-list
     %li.nav-header What's HOT
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
+    - hot_posts.each do |p|
+      %li= link_to p.title, post_path(p) 
 .well.sidebar-nav
   最新發表
   %ul.nav.nav-list
     %li.nav-header What's NEWS
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
-    %li
-      %a{:href => "#",:class => "lipsum(1,16)"}
+    - recent_posts.each do |p|
+      %li= link_to p.title, post_path(p) 
 .well
   Facebook 動態
   .fb-recommendations{"data-header" => "true", "data-height" => "300", "data-width" => "250"}

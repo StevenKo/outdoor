@@ -4,6 +4,7 @@
     %title= yield :title
     %meta{:charset => "utf-8"}
     = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     #fb-root
@@ -39,5 +40,6 @@
           =yield
       %footer
         =render :partial => "_partials/footer"
-= javascript_include_tag "application"
+      - unless user_signed_in?
+        = render :partial => "_partials/login_model"
 = javascript_include_tag "http://more.handlino.com/javascripts/moretext-1.2.js"

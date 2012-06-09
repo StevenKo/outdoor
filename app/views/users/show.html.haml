@@ -14,9 +14,8 @@
   = @user.created_at
 %p
   關注的人
-  - @idols.each do |t|
-    t.name
-    <br>
+  -@idols.each do |t|
+    =link_to image_tag(t.avatar.thumb.small), user_path(t)
 %p
   收藏文章
   - @collect_topics.each do |t|

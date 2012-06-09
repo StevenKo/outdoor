@@ -1,29 +1,44 @@
 .span9
   .flexslider
     %ul.slides
-      %li
-        = image_tag "inacup_samoa.jpg"
-        %p.flex-caption Captions and cupcakes. Winning combination.
-      %li
-        %a{:href => "#"}
-          = image_tag "inacup_pumpkin.jpg"
-        %p.flex-caption This image is wrapped in a link!
-      %li
-        = image_tag "inacup_donut.jpg"
-      %li
-        = image_tag "inacup_vanilla.jpg"
+      - @posts.each do |p|
+        -if p.index_slider
+          %li
+            = link_to image_tag(p.picture), post_path(p)
+            %p.flex-caption= p.title 
+      / %li
+      /   = image_tag "inacup_samoa.jpg"
+      /   %p.flex-caption Captions and cupcakes. Winning combination.
+      / %li
+      /   %a{:href => "#"}
+      /     = image_tag "inacup_pumpkin.jpg"
+      /   %p.flex-caption This image is wrapped in a link!
+      / %li
+      /   = image_tag "inacup_donut.jpg"
+      / %li
+      /   = image_tag "inacup_vanilla.jpg"
   #item_box_container.item_box_container.center
-    - 12.times do
+    - @posts.each do |p|
       .item_box
-        -@imheight = (rand(20)*10 +150).to_s + "px"
-        =link_to image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight), post_path(1)
+        =link_to image_tag( p.picture.thumb.url, :alt => ""), post_path(p)
         .user-info
-          .user-image= image_tag( lorem_image("50x50"), :alt => "",:height=> @imheight)
-          .user-name= link_to "Steven Ko", user_path(1)
+          .user-image= link_to image_tag( p.user.avatar.thumb.small, :alt => ""), user_path(p.user)
+          .user-name= link_to display_name(p.user.name), user_path(p.user)
           .count-info
             %ul
-              %li= link_to("我喜歡","#", :class => "icons-star")
-              %li= link_to("評論","#", :class => "icons-eye")
+              %li= login_link_to p.like_count,post_path(p), :class => "icons-star", :remote => true
+              %li= link_to(p.view_count, post_path(p) , :class => "icons-eye")
+    / - 12.times do
+    /   .item_box
+    /     -@imheight = (rand(20)*10 +150).to_s + "px"
+    /     =link_to image_tag( lorem_image("200X#{@imheight}"), :alt => "",:height=> @imheight), post_path(1)
+    /     .user-info
+    /       .user-image= image_tag( lorem_image("50x50"), :alt => "",:height=> @imheight)
+    /       .user-name= link_to "Steven Ko", user_path(1)
+    /       .count-info
+    /         %ul
+    /           %li= link_to("我喜歡","#", :class => "icons-star")
+    /           %li= link_to("評論","#", :class => "icons-eye")
 .span3
-  =render :partial => "_partials/sidebar"
+  =render :partial => "_partials/sidebar", :locals => {:hot_posts => @view_posts, :recent_posts => @recent_posts}
 .fb-like-box.center{"data-header" => "true", "data-height" => "265", "data-href" => "http://www.facebook.com/myoutdoorgears", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "920"}

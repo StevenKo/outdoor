@@ -1,6 +1,16 @@
 = render :partial => "user_nav", :locals => { :user => @user}
 
-
+#item_box_container.item_box_container.center
+  - @posts.each do |p|
+    .item_box
+      =link_to image_tag( p.picture.thumb.url, :alt => ""), post_path(p)
+      .user-info
+        .user-image= link_to image_tag( p.user.avatar.thumb.small, :alt => ""), user_path(p.user)
+        .user-name= link_to display_name(p.user.name), user_path(p.user)
+        .count-info
+          %ul
+            %li= login_link_to p.like_count,post_path(p), :class => "icons-star", :remote => true
+            %li= link_to(p.view_count, post_path(p) , :class => "icons-eye")
 
 :javascript    
   (function() {
