@@ -9,12 +9,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.topics.build(params[:post])
+    @post = current_user.posts.build(params[:post])
+    @post.tag_list = params[:text][:tag_area]
     if @post.save
-      redirect_to board_topic_path(@topic.board,@topic)
+      redirect_to post_path(@post)
     else
       render :action => :new
     end
+    # redirect_to board_topic_path(@topic.board,@topic)
   end
 
   def popular
