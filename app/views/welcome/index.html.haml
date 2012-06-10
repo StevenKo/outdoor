@@ -40,5 +40,5 @@
     /           %li= link_to("我喜歡","#", :class => "icons-star")
     /           %li= link_to("評論","#", :class => "icons-eye")
 .span3
-  =render :partial => "_partials/sidebar", :locals => {:hot_posts => @view_posts, :recent_posts => @recent_posts}
+  =render :partial => "_partials/sidebar", :locals => {:hot_posts => @view_posts, :recent_posts => @recent_posts, :tags => @tags}
 .fb-like-box.center{"data-header" => "true", "data-height" => "265", "data-href" => "http://www.facebook.com/myoutdoorgears", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "920"}

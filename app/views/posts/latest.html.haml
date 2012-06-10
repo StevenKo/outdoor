@@ -1,8 +1,8 @@
 .span12
   .pagi_container
-    = will_paginate @view_posts
+    = will_paginate @recent_posts
   #item_box_container.item_box_container.center
-    - @view_posts.each do |p|
+    - @recent_posts.each do |p|
       .item_box
         =link_to image_tag( p.picture.thumb.url, :alt => ""), post_path(p)
         .user-info
@@ -13,4 +13,4 @@
               %li= login_link_to p.like_count,post_path(p), :class => "icons-star", :remote => true
               %li= link_to(p.view_count, post_path(p) , :class => "icons-eye")
   .pagi_container
-    = will_paginate @view_posts
+    = will_paginate @recent_posts

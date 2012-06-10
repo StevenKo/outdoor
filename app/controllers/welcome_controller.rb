@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
     @posts = Post.all
     @view_posts = Post.by_views.limit(5)
     @recent_posts = Post.by_date.limit(5)
+    @tags = Post.tag_counts_on(:tags)
   end
   
   def set_top_nav

@@ -32,6 +32,8 @@ NewOutdoor::Application.routes.draw do
   end
 
   post "pictures/upload"
+  get 'category(/:keyword)', :to => 'category#index', :as=> :category_index
+  get 'add_tag(/:tag)', :to => 'posts#add_tag', :as => :add_tag
   root :to => 'welcome#index'
 
   # The priority is based upon order of creation:

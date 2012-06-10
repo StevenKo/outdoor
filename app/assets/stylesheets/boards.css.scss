@@ -4,10 +4,6 @@
 @import "compass";
 @include global-reset;
 
-.pagination{
-	float:right;
-}
-
 .page-tool{
 	@include clearfix;
 }

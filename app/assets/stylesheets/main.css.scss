@@ -36,9 +36,6 @@ footer {
 	margin: 0 auto;
 }
 
-.pagination{
-	@include clearfix;
-}
 
 .group:before, .group:after {
    content: "";
@@ -76,3 +73,43 @@ footer {
 	margin-left: 3px;
 	padding-bottom: 5px;
 }
+
+.pagination {
+  padding: 3px;
+  margin: 3px;
+  float:right;
+}
+.pagination a {
+  margin: 2px;
+  border: 1px solid ;
+  text-decoration: none;
+  line-height: 30px;
+}
+.pagination a:hover, .pagination a:active {
+  border: 1px solid #000099;
+  color: #000;
+}
+.pagination em.current {
+  margin: 2px;
+  border: 1px solid;
+  line-height: 30px;
+  float: left;
+  padding: 0 10px;
+}
+.pagination span.disabled {
+  margin: 2px;
+  border: 1px solid;
+  line-height: 30px;
+  padding: 0 10px;
+  float: left;
+}
+.pagi_container{
+	@include clearfix;
+}
+
+
+// tags
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }

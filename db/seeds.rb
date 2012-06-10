@@ -18,3 +18,32 @@ t1 = Topic.create( :title => "最新的裝備")
 
 b1.topics << t1
 t1.posts << p1
+
+
+p = Post.find(2)
+p.tag_list = "BlackDiamond,CAM,攀岩"
+p.save
+
+p = Post.find(3)
+p.tag_list = "BlackDiamond,CAM,攀岩"
+p.save
+
+p = Post.find(4)
+p.tag_list = "水壺,登山"
+p.save
+
+p = Post.find(5)
+p.tag_list = "登山鞋,登山,二手裝備"
+p.save
+
+p = Post.find(6)
+p.tag_list = "PETZL,二手裝備,攀岩"
+p.save
+
+p = Post.find(7)
+p.tag_list = "BlackDiamond,登山,二手裝備,攀岩"
+p.save
+
+p = Post.find(7)
+p.tag_list = "登山服飾,TheNorthFace"
+p.save

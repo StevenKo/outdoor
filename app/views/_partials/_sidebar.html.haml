@@ -9,8 +9,14 @@
   %ul.nav.nav-list
     %li.nav-header What's NEWS
     - recent_posts.each do |p|
-      %li= link_to p.title, post_path(p) 
+      %li= link_to p.title, post_path(p)
+.well
+  分類
+  %br
+  - tag_cloud(tags, %w(css1 css2 css3 css4)) do |tag, css_class|
+    = link_to tag.name, category_index_path(tag.name), :class => css_class
 .well
   Facebook 動態
   .fb-recommendations{"data-header" => "true", "data-height" => "300", "data-width" => "250"}
+
   

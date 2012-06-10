@@ -1,3 +1,5 @@
+= javascript_include_tag "jquery.tagsinput.min.js"
+= stylesheet_link_tag    "jquery.tagsinput.css"
 %h3 文章標題：
 %h3
 = simple_form_for @post, :url => posts_path(:topic_id => @topic) do |f|
@@ -5,7 +7,11 @@
   %br
   加入標籤：
   %br
+  = tag_autocomplete_js 'text_tag_area'
   = text_area :text ,"tag_area",:cols => false, :rows => false
+  可以輸入，也可從右邊點選標籤
+  - tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class|
+    = link_to tag.name, add_tag_path(tag.name), :class => css_class, :remote => true
   %br
   = f.button :submit, "發表"
 

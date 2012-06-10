@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   # before_filter :find_topic, :only => [ :new , :create ]
   def new
     @post = Post.new
+    @tags = Post.tag_counts_on(:tags)
     # @post = @topic.posts.build
   end
 
@@ -18,13 +19,22 @@ class PostsController < ApplicationController
 
   def popular
     @top_nav_num = 3
+    @view_posts = Post.by_views.paginate(:page => params[:page], :per_page => 2)
   end
 
   def latest
     @top_nav_num = 4
+    @recent_posts = Post.by_date.paginate(:page => params[:page], :per_page => 2)
   end
 
   def show
+  end
+  
+  def add_tag
+    @tag = params[:tag]
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
