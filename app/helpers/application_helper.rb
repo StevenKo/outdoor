@@ -37,6 +37,7 @@ module ApplicationHelper
   
   def nav_top_bar top_nav_num
     
+    top_nav_num ||= 1
     class_array = Array.new(8,"")
     class_array[top_nav_num] = "active"
     

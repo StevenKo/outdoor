@@ -1,9 +1,9 @@
 = javascript_include_tag "jquery.tagsinput.min.js"
 = stylesheet_link_tag    "jquery.tagsinput.css"
-%h3 文章標題：
 %h3
 = simple_form_for @post, :url => posts_path(:topic_id => @topic) do |f|
   = render :partial => 'form', :locals => { :f => f}
+  %a.btn.btn-primary.btn-large{"data-toggle" => "modal", :href => "#myModal",:id => "insert-image"} 插入圖片
   %br
   加入標籤：
   %br
@@ -14,8 +14,24 @@
     = link_to tag.name, add_tag_path(tag.name), :class => css_class, :remote => true
   %br
   = f.button :submit, "發表"
+#myModal.modal.hide.fade{:style => "display: none; "}
+  .modal-header
+    %button.close{"data-dismiss" => "modal", :type => "button"} ×
+    %a#pickfiles{:href => "#"} [上傳圖片]
+    %a#uploadfiles{:href => "#"} [上傳]
+  .modal-body
+    #pictures-container.uploader-mid
+      - @pictures.each do |p|
+        .modal-image
+          = link_to image_tag(p), "#", "data-dismiss" => "modal"
+  .modal-footer
+    %p
+      上傳檔案限制為 5MB 以下之 jpg, jpeg, png 格式圖片。
+      %br 選擇上傳照片時按住 Shift 不放可選擇多張。
+      %a.btn{"data-dismiss" => "modal", :href => "#"} Close
 
-
-%br/
-%a#pickfiles{:href => "#"} [選擇圖片]
-%a#uploadfiles{:href => "#"} [上傳圖片]
+#pictureflag{:style => "display: none; "}
+/ #filelist No runtime found.
+/ %br/
+/ %a#pickfiles{:href => "#"} [選擇圖片]
+/ %a#uploadfiles{:href => "#"} [上傳圖片]

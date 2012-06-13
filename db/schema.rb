@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120608081951) do
+ActiveRecord::Schema.define(:version => 20120610143250) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -57,7 +57,10 @@ ActiveRecord::Schema.define(:version => 20120608081951) do
     t.text     "url_thumb"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "pictures", ["user_id"], :name => "index_pictures_on_user_id"
 
   create_table "posts", :force => true do |t|
     t.integer  "topic_id"

@@ -13,20 +13,21 @@ $ ->
       "<%= request_forgery_protection_token %>": "<%= form_authenticity_token %>"
       "<%= request.session_options[:key] %>": "<%= request.session_options[:id] %>"
   )
-  plUploader.bind "Init", (up, params) ->
-    $("#filelist").html "<div>Current runtime: " + params.runtime + "</div>"
+  # plUploader.bind "Init", (up, params) ->
+  #     $("#filelist").html "<div>Current runtime: " + params.runtime + "</div>"
  
   plUploader.bind "FilesAdded", (up, files) ->
     $.each files, (i, file) ->
-      $("#filelist").append "<div id=\"" + file.id + "\">" + file.name + " (" + plupload.formatSize(file.size) + ") <b></b>" + "</div>"
+      $("#pictures-container").prepend "<div id=\"" + file.id + "\" class=\"modal-image\"><a href=\"#\" data-dismiss=\"modal\">" + "<img src='http://placehold.it/124X90&text="+file.name+"' >" + "</a></div>"
  
-  plUploader.bind "UploadProgress", (up, file ) ->
-    $("#" + file.id + " b").html file.percent + "%" 
+  # plUploader.bind "UploadProgress", (up, file ) ->
+  #    $("#" + file.id).children().attr("src","http://ajaxload.info/cache/ff/ff/ff/00/00/00/1-0.gif")
+    # $("#" + file.id + " b").html "<h5>上傳中..."+file.percent+"%</h5><div class=\"progress progress-danger progress-striped active\"><div class=\"bar\" style=\"width:"+ file.percent + "%;\"></div>" 
  
   plUploader.bind "FileUploaded", (up, file ,response) ->
     result = JSON.parse(response["response"])
-    $("#" + file.id + " ").append "<img src=\""+result.thumb+"\"  onclick=\"jQuery('#post_content').append('<img src="+result.median+">') \">"
- 
+    $("#" + file.id + " img").attr("src",result.median)
+   
   $("#uploadfiles").click (e) ->
     plUploader.start()
     e.preventDefault()

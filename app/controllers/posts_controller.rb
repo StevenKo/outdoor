@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @tags = Post.tag_counts_on(:tags)
+    @pictures = current_user.pictures.collect{|p| p.file.median}
+    # @pictures = Picture.all.collect{|p| p.file.median}
     # @post = @topic.posts.build
   end
 
