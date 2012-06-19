@@ -1,12 +1,18 @@
-%h3 New Topic
-= simple_form_for @topic, :url => board_topics_path(@board) do |f|
+%h3 發表新主題
+= simple_form_for @topic, :url => forum_board_topics_path(@board) do |f|
   = render :partial => 'form', :locals => { :f => f}
-  tags
+  %a.btn.btn-primary.btn-large{"data-toggle" => "modal", :href => "#myModal",:id => "insert-image"} 插入圖片
+  %br 
+  %br
+  加入標籤：
+  %br
+  = tag_autocomplete_js 'text_tag_area'
   = text_area :text ,"tag_area",:cols => false, :rows => false
-  = f.submit
+  可以輸入，也可從右邊點選標籤
+  - tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class|
+    = link_to tag.name, add_tag_path(tag.name), :class => css_class, :remote => true
+  %br
+  %br
+  = f.button :submit, "發表"
 
-
-#filelist No runtime found.
-%br/
-%a#pickfiles{:href => "#"} [選擇圖片]
-%a#uploadfiles{:href => "#"} [上傳圖片]
+= render :partial => "_partials/photo_select"

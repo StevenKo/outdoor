@@ -11,6 +11,7 @@ class Forum::BoardsController < Forum::ForumController
   
   def show
     @board = Board.find(params[:id])
+    @topics = @board.topics.paginate(:page => params[:page], :per_page => 2)
   end
   
 end

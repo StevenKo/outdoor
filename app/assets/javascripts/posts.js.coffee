@@ -14,6 +14,7 @@ $ ->
 		else
 		  $('#post_content').append('<img src='+$(this).children().attr('src')+'>')
 		  $('#share_post_content').append('<img src='+$(this).children().attr('src')+'>')
+		  $('#topic_content').append('<img src='+$(this).children().attr('src')+'>')
 	$(".modal-image a").live("click",insert_picture)
 
 	# 	link_image = $(this)

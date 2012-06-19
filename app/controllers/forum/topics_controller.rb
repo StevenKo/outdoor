@@ -4,13 +4,16 @@ class Forum::TopicsController < Forum::ForumController
   def new
     @board = Board.find(params[:board_id])
     @topic = @board.topics.build
+    @tags = SharePost.tag_counts_on(:tags)
+    @pictures = current_user.pictures
   end
   
   def create
     @topic = current_user.topics.build(params[:topic])
     @topic.board = Board.find(params[:board_id])
+    @topic.tag_list = params[:text][:tag_area]
     if @topic.save
-      redirect_to board_topic_path(@topic.board,@topic)
+      redirect_to forum_board_topic_path(@topic.board,@topic)
     else
       render :action => :new
     end
@@ -19,6 +22,9 @@ class Forum::TopicsController < Forum::ForumController
   
   def show
     @topic = Topic.find(params[:id])
+    @posts = @topic.posts.paginate(:page => params[:page], :per_page => 2)
+    @new_post = @topic.posts.build
+    @pictures = current_user.pictures
   end
   
   def edit

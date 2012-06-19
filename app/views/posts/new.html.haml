@@ -14,24 +14,4 @@
     = link_to tag.name, add_tag_path(tag.name), :class => css_class, :remote => true
   %br
   = f.button :submit, "發表"
-#myModal.modal.hide.fade{:style => "display: none; "}
-  .modal-header
-    %button.close{"data-dismiss" => "modal", :type => "button"} ×
-    %a#pickfiles{:href => "#"} [上傳圖片]
-    %a#uploadfiles{:href => "#"} [上傳]
-  .modal-body
-    #pictures-container.uploader-mid
-      - @pictures.each do |p|
-        .modal-image
-          = link_to image_tag(p.file.median,"data-value" => p.id), "#", "data-dismiss" => "modal"
-  .modal-footer
-    %p
-      上傳檔案限制為 5MB 以下之 jpg, jpeg, png 格式圖片。
-      %br 選擇上傳照片時按住 Shift 不放可選擇多張。
-      %a.btn{"data-dismiss" => "modal", :href => "#"} Close
-
-#pictureflag{:style => "display: none; "}
-/ #filelist No runtime found.
-/ %br/
-/ %a#pickfiles{:href => "#"} [選擇圖片]
-/ %a#uploadfiles{:href => "#"} [上傳圖片]
+= render :partial => "_partials/photo_select"

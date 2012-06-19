@@ -6,20 +6,7 @@
 %ul.page-tool
   %li.btn 
     = link_to "發表新主題", new_forum_board_topic_path(@topic.board)
-  .pagination
-    %ul
-      %li
-        %a{:href => "#"} Prev
-      %li.active
-        %a{:href => "#"} 1
-      %li
-        %a{:href => "#"} 2
-      %li
-        %a{:href => "#"} 3
-      %li
-        %a{:href => "#"} 4
-      %li
-        %a{:href => "#"} Next
+  = will_paginate @posts  
 .post-content
   .post-user-info
     .user-image= image_tag( lorem_image("100x120"), :alt => "")
@@ -128,32 +115,39 @@
           10
   .post-text
     改天來試試看！
+- @posts.each do |post|
+  .post-content
+    .post-user-info
+      .user-image= image_tag( post.user.avatar.thumb.big, :alt => "")
+      .user-name= post.user.name
+      %ul.stats-tabs
+        %li
+          %a{:href => "/user/100001386398010/recipes"}
+            %span> 追踨
+            9
+        %li
+          %a{:href => "/user/100001386398010/dishes"}
+            %span> 粉絲
+            0
+        %li
+          %a{:href => "/user/100001386398010/followers"}
+            %span> 收藏
+            17
+        %li
+          %a{:href => "/user/100001386398010/followers"}
+            %span> 發表
+            10
+    .post-text
+      =post.content.html_safe
     
 .quick-comment
   .comment-title
     %h1 快速回覆  
-  = simple_form_for @topic, :url => forum_posts_path(@board) do |f|
-    = render :partial => 'posts/form', :locals => { :f => f}
-    tags
-    = text_area :text ,"tag_area",:cols => false, :rows => false
-    = f.submit
-/ .box
-/   %a{:href => "#"}= lorem_name
-/   .thumbnail-image= image_tag( lorem_image("100X120px"), :alt => "",:height=> "120px")
-/   .topic
-/     %header
-/       %a{:href => "#"} This is the topic
-/     註冊日期:
-/     %span= lorem_date
-/     %br
-/     收藏
-/     -3.times do
-/       .thumbnail-image= image_tag( lorem_image("50X50px"), :alt => "",:height=> "50px")
-/     
-/     %article Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-/     .topic-link
-/       %a{:href => "#"} 回覆
-/       %span |
-/       %a{:href => "#"} 收藏
-/       -if @topic.user == current_user
-/         .btn= link_to "修改文章", edit_forum_board_topic_path
+  = simple_form_for @new_post, :url => forum_posts_path(@board) do |f|
+    = render :partial => 'forum/posts/form', :locals => { :f => f}
+    %a.btn.btn-primary.btn-large{"data-toggle" => "modal", :href => "#myModal",:id => "insert-image"} 插入圖片
+    %br
+    %br
+    = text_field :topic, "id",:value => @topic.id, :style => "display: none; "
+    = f.button :submit, "發表回覆"
+= render :partial => "_partials/photo_select"

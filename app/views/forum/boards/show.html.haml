@@ -3,26 +3,11 @@
     =link_to "OutdoorGear 論壇",forum_boards_path 
     %span.divider /
   %li
-    =link_to "登山", ""
-    %span.divider /
-  %li.active You are here
+    =@board.title
 .page-tool
   %li.btn 
-    = link_to "發表新主題", ''
-  .pagination
-    %ul
-      %li
-        %a{:href => "#"} Prev
-      %li.active
-        %a{:href => "#"} 1
-      %li
-        %a{:href => "#"} 2
-      %li
-        %a{:href => "#"} 3
-      %li
-        %a{:href => "#"} 4
-      %li
-        %a{:href => "#"} Next
+    = link_to "發表新主題", new_forum_board_topic_path(@board)
+  = will_paginate @topics  
 -5.times do   
   .mybox
     #twitter.sharrre{"data-text" => "Make your sharing widget with Sharrre (jQuery Plugin)", "data-title" => "Tweet", "data-url" => "http://sharrre.com/"}
