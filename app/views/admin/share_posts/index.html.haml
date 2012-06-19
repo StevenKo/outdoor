@@ -1,0 +1,46 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", admin_share_posts_path
+  .actions-bar.wat-cf
+    = will_paginate @share_posts
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      SharePosts
+    .search
+      .inner
+      %table.table.users
+        %tr
+          %th.first.norwap
+            = t("activerecord.labels.id", :default => "ID")
+          %th.user User
+          %th.name Title
+          %th.picture Picture
+          %th.like Like
+          %th.view View
+          %th.index 主頁slide
+          %th.last &nbsp;
+        - @share_posts.each do |share_post|
+          %tr{:class => cycle("odd", "even")}
+            %td.norwap
+              = share_post.id
+            %td
+              = link_to share_post.user.name, admin_user_path(share_post.user)
+            %td
+              = share_post.title
+            %td
+              = image_tag share_post.picture.thumb.small
+            %td
+              = share_post.like_count
+            %td
+              = share_post.view_count
+            %td
+              = share_post.index_slider
+            %td.last
+              = link_to "#{t("web-app-theme.show", :default => "Show")}", admin_share_post_path(share_post)
+              |
+              = link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_share_post_path(share_post)
+              |
+              = link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_share_post_path(share_post), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+- content_for :sidebar, render(:partial => 'admin/sidebar')

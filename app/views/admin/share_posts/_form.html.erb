@@ -1,0 +1,56 @@
+
+  <div class="group">
+    <%= f.label :topic_id, t("activerecord.attributes.share_post.topic_id", :default => "Topic"), :class => :label %>
+    <%= f.number_field :topic_id, :class => 'number_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :user_id, t("activerecord.attributes.share_post.user_id", :default => "User"), :class => :label %>
+    <%= f.number_field :user_id, :class => 'number_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :content, t("activerecord.attributes.share_post.content", :default => "Content"), :class => :label %>
+    <%= f.text_area :content, :class => 'text_area' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :title, t("activerecord.attributes.share_post.title", :default => "Title"), :class => :label %>
+    <%= f.text_field :title, :class => 'text_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :picture, t("activerecord.attributes.share_post.picture", :default => "Picture"), :class => :label %>
+    <%= f.text_field :picture, :class => 'text_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :like_count, t("activerecord.attributes.share_post.like_count", :default => "Like count"), :class => :label %>
+    <%= f.number_field :like_count, :class => 'number_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :view_count, t("activerecord.attributes.share_post.view_count", :default => "View count"), :class => :label %>
+    <%= f.number_field :view_count, :class => 'number_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :index_slider, t("activerecord.attributes.share_post.index_slider", :default => "Index slider"), :class => :label %>
+    <%= f.check_box :index_slider, :class => 'check_box' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+        
+<div class="group navform wat-cf">
+  <button class="button" type="submit">
+    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>
+  </button>
+  <span class="text_button_padding"><%= t("web-app-theme.or", :default => "or") %></span>
+	<%= link_to t("web-app-theme.cancel", :default => "Cancel"), admin_share_posts_path, :class => "text_button_padding link_button" %>
+</div>

@@ -7,3 +7,55 @@
  */
 
 /* Write here your css for overriding the theme's rules */
+
+
+.pagination {
+	padding:20px 10px 10px 15px;
+	margin:0;
+}
+
+	.pagination a {
+		line-height:20px;
+	}
+	
+	.pagination .next a {
+		border:1px solid #C3C4BA;
+	}
+	
+	.pagination .next a:hover {
+		border:1px solid #818171;
+	}
+
+	.pagination ul {
+		clear:both;
+		overflow:hidden;
+		list-style: none;
+		border:none;
+	}
+	
+	.pagination li {
+		float:left;
+	}
+	
+	.pagination .gap {
+		background:none;
+		border:none;
+		padding:0;
+		margin:0;
+	}
+	
+	.pagination .disabled a {
+		background:none;
+		border:none;
+	}
+	
+	.pagination .disabled a:hover {
+		background:none;
+		border:none;
+		box-shadow:none;
+	}
+	
+	.pagination .active a {
+		background:#333;
+		color:#fff;
+	}

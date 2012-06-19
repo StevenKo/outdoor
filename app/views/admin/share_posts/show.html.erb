@@ -1,0 +1,58 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_share_posts_path  %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_share_post_path %></li>
+    </ul>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.topic_id", :default => t("activerecord.labels.topic_id", :default => "Topic")) %>:</b>
+          <%= @share_post.topic_id %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.user_id", :default => t("activerecord.labels.user_id", :default => "User")) %>:</b>
+          <%= @share_post.user_id %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.content", :default => t("activerecord.labels.content", :default => "Content")) %>:</b>
+          <%= @share_post.content %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.title", :default => t("activerecord.labels.title", :default => "Title")) %>:</b>
+          <%= @share_post.title %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.picture", :default => t("activerecord.labels.picture", :default => "Picture")) %>:</b>
+          <%= @share_post.picture %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.like_count", :default => t("activerecord.labels.like_count", :default => "Like count")) %>:</b>
+          <%= @share_post.like_count %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.view_count", :default => t("activerecord.labels.view_count", :default => "View count")) %>:</b>
+          <%= @share_post.view_count %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_share_post.index_slider", :default => t("activerecord.labels.index_slider", :default => "Index slider")) %>:</b>
+          <%= @share_post.index_slider %>
+        </p>
+      <div class="wat-cf">
+        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_share_post_path(@share_post), :class => "button" %> 
+        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_share_post_path(@share_post), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

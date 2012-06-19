@@ -41,7 +41,10 @@ NewOutdoor::Application.routes.draw do
   get 'admin' => 'admin#index'
   
   namespace :admin do
-    
+    resources :users, :only => [:index, :show, :edit, :destroy,:update]
+    resources :share_posts, :only => [:index, :show, :edit, :destroy,:update]
+    resources :brands
+    resources :tags
   end
   
   
