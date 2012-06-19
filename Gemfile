@@ -81,6 +81,8 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',:git => 'git://githu
 
 gem 'lorem'
 
+gem 'web-app-theme'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

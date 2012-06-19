@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610143250) do
+ActiveRecord::Schema.define(:version => 20120619025931) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(:version => 20120610143250) do
 
   add_index "collect_user_post_ships", ["post_id"], :name => "index_collect_user_post_ships_on_post_id"
   add_index "collect_user_post_ships", ["user_id"], :name => "index_collect_user_post_ships_on_user_id"
+
+  create_table "collect_user_share_post_ships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "collect_user_share_post_ships", ["post_id"], :name => "index_collect_user_share_post_ships_on_post_id"
+  add_index "collect_user_share_post_ships", ["user_id"], :name => "index_collect_user_share_post_ships_on_user_id"
 
   create_table "collect_user_topic_ships", :force => true do |t|
     t.integer  "user_id"
@@ -77,6 +87,22 @@ ActiveRecord::Schema.define(:version => 20120610143250) do
 
   add_index "posts", ["topic_id"], :name => "index_posts_on_topic_id"
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
+
+  create_table "share_posts", :force => true do |t|
+    t.integer  "topic_id"
+    t.integer  "user_id"
+    t.text     "content"
+    t.string   "title"
+    t.string   "picture"
+    t.integer  "like_count",   :default => 0
+    t.integer  "view_count",   :default => 0
+    t.boolean  "index_slider", :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "share_posts", ["topic_id"], :name => "index_share_posts_on_topic_id"
+  add_index "share_posts", ["user_id"], :name => "index_share_posts_on_user_id"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

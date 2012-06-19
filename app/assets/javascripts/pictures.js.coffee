@@ -27,7 +27,7 @@ $ ->
   plUploader.bind "FileUploaded", (up, file ,response) ->
     result = JSON.parse(response["response"])
     $("#" + file.id + " img").attr("src",result.median)
-   
+    $("#" + file.id + " img").attr("data-value",result.picture_id)
   $("#uploadfiles").click (e) ->
     plUploader.start()
     e.preventDefault()

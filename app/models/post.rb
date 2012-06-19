@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
   
   belongs_to :topic
   belongs_to :user
+  # belongs_to :user, :counter_cache => true
   
   has_many :collect_user_post_ships
   has_many :users_to_collect, :through => :collect_user_post_ships, :source => :user

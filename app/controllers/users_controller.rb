@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class UsersController < ApplicationController
   
   def show
@@ -22,7 +24,7 @@ class UsersController < ApplicationController
   def collections
     @nav_num = 2
     @user = User.find(params[:id])
-    @collect_posts = @user.collect_posts
+    @collect_posts = @user.collect_share_posts
   end
   
   def idols
@@ -36,5 +38,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @fans = @user.fans
   end
-   
+  
+  def follow
+    user = User.find(params[:id])
+    if current_user.follow(user)
+      (current_user.idols.delete user)
+      @btn_text = "關注"
+    else      
+      current_user.idols << user
+      @btn_text = "已關注"
+    end
+    respond_to do |format|
+      format.js
+    end
+  end 
 end

@@ -22,6 +22,9 @@ NewOutdoor::Application.routes.draw do
       get 'popular'
       get 'latest'
     end
+    member do
+      put 'add_collect'
+    end
   end
 
   resources :users, :except => [:new, :create, :destroy] do
@@ -29,7 +32,19 @@ NewOutdoor::Application.routes.draw do
     get "collections", :on => :member
     get "followers", :on => :member
     get "idols", :on => :member
+    member do
+      put 'follow'
+    end
   end
+  
+  # admin
+  get 'admin' => 'admin#index'
+  
+  namespace :admin do
+    
+  end
+  
+  
 
   post "pictures/upload"
   get 'category(/:keyword)', :to => 'category#index', :as=> :category_index

@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title Dashboard
+    = stylesheet_link_tag 'web_app_theme'
+    = yield :head_includes
+    = csrf_meta_tag
+  %body
+    #containers
+      #header
+        %h1
+          %a{:href => "/"} Dashboard
+        #user-navigation
+          %ul.wat-cf
+            %li
+              %a.logout{:href => "/logout"}= t("web-app-theme.logout", :default => "Logout")
+        #main-navigation
+          %ul.wat-cf
+            %li.first
+              =link_to "回首頁", root_path
+            %li.active
+              =link_to '後台首頁', admin_path
+      #wrapper.wat-cf
+        .flash
+          - flash.each do |type, message|
+            %div{:class => "message #{type}"}
+              %p= message
+        #main
+          = yield
+          #footer
+            .block
+              %p
+                Copyright &copy; #{Time.now.year} Dashboard.
+        #sidebar
+          = yield :sidebar

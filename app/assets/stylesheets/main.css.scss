@@ -1,3 +1,20 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require boards
+ *= require brands
+ *= require category
+ *= require flexslider
+ *= require ie
+ *= require jquery.tagsinput
+ *= require pictures
+ *= require posts
+ *= require sharre
+ *= require topics
+ *= require users
+ *= require welcome
+*/
 @import "compass";
 @include global-reset;
 @import "box";

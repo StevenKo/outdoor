@@ -9,9 +9,11 @@ $ ->
 		$("#pictureflag").text('text')
 	insert_picture = (e) ->
 		if $("#pictureflag").text() == 'main'
+			$("#picture_id").attr("value",$(this).children().data('value'))
 			$("#main-pic").attr("src",$(this).children().attr('src'))
 		else
 		  $('#post_content').append('<img src='+$(this).children().attr('src')+'>')
+		  $('#share_post_content').append('<img src='+$(this).children().attr('src')+'>')
 	$(".modal-image a").live("click",insert_picture)
 
 	# 	link_image = $(this)
@@ -41,3 +43,4 @@ $ ->
 	#   $('#insert-image').click (e) ->
 	# 	  $(".modal-image a").bind("click",test2)
 	# 		$(".modal-image a").unbind("click",test1)
+	

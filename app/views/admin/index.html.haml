@@ -1,0 +1,11 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      / %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", admin_stores_path
+      / %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_store_path
+  .content
+    .box
+      %h1 後台管理
+      .desc 從右邊選擇欲操作的資料
+      
+- content_for :sidebar, render(:partial => 'sidebar')

@@ -2,7 +2,7 @@ class PicturesController < ApplicationController
   skip_filter :verify_authenticity_token, :only => [:upload]
   def upload
     self.create params[:fname]
-    render :json => {:url => @picture.file.url ,  :median =>  @picture.file.median.url , :thumb => @picture.file.thumb.url }
+    render :json => {:picture_id => @picture.id, :url => @picture.file.url ,  :median =>  @picture.file.median.url , :thumb => @picture.file.thumb.url }
   end
 
   protected

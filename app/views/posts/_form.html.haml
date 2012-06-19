@@ -1,9 +1,9 @@
-文章標題：
-= f.input :title, :placeholder => '請輸入標題', :label => false
+= f.input :title, :placeholder => '請輸入標題', :label => "文章標題："
 %p
   文章封面: 
   %br
   .main-pic
     = link_to image_tag("main-pic.png", :id => "main-pic"),"#myModal", "data-toggle" => "modal"
+= text_field :picture, "id", :style => "display: none; "
 文章內容：
 = f.text_area :content , :label => "Content" , :class => "tinymce"

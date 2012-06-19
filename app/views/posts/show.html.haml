@@ -14,31 +14,28 @@
       %li
         =link_to "攀岩","#"
         =content_tag(:span, "16", :class => "list-count")
-  %button{:class => "btn btn-success"}
-    收藏
+  %br
+  = render_collect_btn @post
+  %br
   .post-user-info
     %h3 作者
-    .user-image= image_tag( lorem_image("100x120"), :alt => "",:height=> @imheight)
-    .user-name= lorem_name
+    .user-image= image_tag( @post.user.avatar)
+    .user-name= @post.user.name
+    = render_follow_btn @post.user
+    %br
     %ul.stats-tabs
+      %li 
+        =link_to "關注的人 #{@post.user.idols.size}" ,idols_user_path(@post.user)
       %li
-        %a{:href => "/user/100001386398010/recipes"}
-          %span> 追踨
-          9
+        =link_to "粉絲 #{@post.user.fans.size}" ,followers_user_path(@post.user)
       %li
-        %a{:href => "/user/100001386398010/dishes"}
-          %span> 粉絲
-          0
+        =link_to "收藏文章 #{@post.user.collect_share_posts.size}" ,collections_user_path(@post.user)
       %li
-        %a{:href => "/user/100001386398010/followers"}
-          %span> 收藏
-          17
-      %li
-        %a{:href => "/user/100001386398010/followers"}
-          %span> 發表
-          10
+        =link_to "發表文章 #{@post.user.posts.size}",posts_user_path(@post.user)
     
 .span9
+  %section
+    = @post.content.html_safe
   %section
     %header
       %h1 〈糧食〉輕快風乾燥飯
