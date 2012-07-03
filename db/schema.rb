@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120619130741) do
+ActiveRecord::Schema.define(:version => 20120626120252) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -170,6 +170,10 @@ ActiveRecord::Schema.define(:version => 20120619130741) do
     t.string   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "posts_count",            :default => 0
+    t.integer  "collect_posts_count",    :default => 0
+    t.integer  "fans_count",             :default => 0
+    t.integer  "idols_count",            :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

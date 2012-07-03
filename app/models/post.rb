@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   acts_as_taggable
   
   belongs_to :topic
-  belongs_to :user
+  belongs_to :user , :counter_cache => true
   # belongs_to :user, :counter_cache => true
   
   has_many :collect_user_post_ships
