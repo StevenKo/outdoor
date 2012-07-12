@@ -48,10 +48,7 @@ footer {
 	    width: 975px;
 }
 
-.center {
-	text-align:center;
-	margin: 0 auto;
-}
+
 
 
 .group:before, .group:after {
@@ -130,3 +127,11 @@ footer {
 .css2 { font-size: 1.2em; }
 .css3 { font-size: 1.4em; }
 .css4 { font-size: 1.6em; }
+
+
+.fb-like-box.fb_iframe_widget {
+  margin: 20px auto 0;
+  width: 975px;
+  display: block;
+  position: static;
+}

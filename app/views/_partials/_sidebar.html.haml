@@ -1,15 +1,59 @@
-.well.sidebar-nav
-  熱門文章
+.well
+  分類
   %ul.nav.nav-list
-    %li.nav-header What's HOT
-    - hot_posts.each do |p|
-      %li= link_to p.title, post_path(p) 
-.well.sidebar-nav
-  最新發表
-  %ul.nav.nav-list
-    %li.nav-header What's NEWS
-    - recent_posts.each do |p|
-      %li= link_to p.title, post_path(p)
+    %li
+      #accordion.accordion
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+            服飾
+        #collapseOne.accordion-body.collapse
+          .accordion-inner
+            %ul.nav
+              %li= link_to "男士","#"
+              %li= link_to "女士","#"
+              %li= link_to "小孩","#"
+              %li= link_to "鞋子","#"
+    %li
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseTwo"}
+            戶外裝備
+        #collapseTwo.accordion-body.collapse
+          .accordion-inner
+            XDDD
+    %li
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseThree"}
+            背包
+        #collapseThree.accordion-body.collapse
+          .accordion-inner
+            XDDD
+    %li
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFour"}
+            帳篷
+        #collapseFour.accordion-body.collapse
+          .accordion-inner
+            哈哈
+    %li
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseFive"}
+            行李箱
+        #collapseFive.accordion-body.collapse
+          .accordion-inner
+            XDDD
+    %li
+      .accordion-group
+        .accordion-heading
+          %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseSix"}
+            其它
+        #collapseSix.accordion-body.collapse
+          .accordion-inner
+            oao
 .well
   分類
   %br

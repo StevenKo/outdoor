@@ -43,8 +43,27 @@
 	}
 }
 
-//.main-pic{
-//	@include box-shadow(2px 2px 5px rgba(#000,.3));
-//	padding: 3px 0 0 3px;
-//	width: 360px;
-//}
+
+@import "compass";
+
+.post-semantic-navigation{
+  margin-top: 20px;
+}
+
+.post-sub-nav {
+@include border-radius(6px);
+border: 1px solid #C7C7C7;
+margin-bottom: 14px;
+margin-left: 0;
+padding-left: 20px;
+display: block;
+height: 90px;
+background: rgba(255, 255, 255, 0.45);
+}
+
+.post-sub-nav li {
+display: inline-block;
+padding: 4px 5px;
+height: 2.5em;
+line-height: 2.5em;
+}

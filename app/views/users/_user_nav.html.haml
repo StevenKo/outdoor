@@ -1,5 +1,10 @@
-.subnav
-  %ul.nav.nav-pills
+.user-info
+  .user-image
+    =image_tag('http://graph.facebook.com/1511171039/picture?type=square')
+  .user-name
+    Steven Ko
+.semantic-navigation   
+  %ul#sub_navigation.sub-nav
     %li
       = link_to "基本資料", user_path(user)
     %li

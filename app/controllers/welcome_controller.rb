@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   before_filter :set_top_nav
   
   def index
-    @posts = SharePost.all
+    @posts = Post.all
     @view_posts = SharePost.by_views.limit(5)
     @recent_posts = SharePost.by_date.limit(5)
     @tags = SharePost.tag_counts_on(:tags)

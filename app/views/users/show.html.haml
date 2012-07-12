@@ -1,26 +1,27 @@
-= render :partial => "user_nav", :locals => { :user => @user}
-%p
-  帳號:
-  = display_name @user.name
-%p
-  e-mail:
-  = @user.email
-%p
-  大頭照:
-  %br
-  = image_tag(@user.avatar,:alt=>"")
-%p
-  註冊日期:
-  = @user.created_at
-%p
-  關注的人
-  -@idols.each do |t|
-    =link_to image_tag(t.avatar.thumb.small), user_path(t)
-%p
-  收藏文章
-  - @collect_topics.each do |t|
-    t.title
-    <br>
+.well 
+  = render :partial => "user_nav", :locals => { :user => @user}
+  %p
+    帳號:
+    = display_name @user.name
+  %p
+    e-mail:
+    = @user.email
+  %p
+    大頭照:
+    %br
+    = image_tag(@user.avatar,:alt=>"")
+  %p
+    註冊日期:
+    = @user.created_at
+  %p
+    關注的人
+    -@idols.each do |t|
+      =link_to image_tag(t.avatar.thumb.small), user_path(t)
+  %p
+    收藏文章
+    - @collect_topics.each do |t|
+      t.title
+      <br>
 :javascript    
   (function() {
 
